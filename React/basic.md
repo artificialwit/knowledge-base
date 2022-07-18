@@ -17,7 +17,7 @@ To summarize:
 ### Prerequisite:
 - Node is a JavaScript runtime environment that allows JavaScript to run on the server. Node was created in 2009. Node has played a great role for the growth of JavaScript. The React application starts by default at localhost 3000. The create-react-app has configured a node server for the React Application. That is why we need node and node modules
 
-  - npm install n stable -- run to get updated npm
+  - npm install n stable // run to get updated npm
   - npm install -g create-react-app // install react module using npm command globaly
   - create-react-app myAppName // create a react app with some basic file
   - cd myAppName // move to folder created by create-react-app command
