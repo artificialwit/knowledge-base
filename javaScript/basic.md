@@ -1,10 +1,10 @@
 # JavaScript basics
   Java script basic contains the basic programming details. Use reference link to go for basic understanding. and that summary is written.
 
-# References
+## References
   https://github.com/Asabeneh/30-Days-Of-React/blob/master/01_Day_JavaScript_Refresher/01_javascript_refresher.md
 
-# Setup
+## Setup
   - You may need to install these extensions from Visual Studio Code
     - Prettier
     - ESLint
