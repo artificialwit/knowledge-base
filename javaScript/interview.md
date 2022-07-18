@@ -27,7 +27,7 @@
 <p>...content after scripts...</p>
 
 ```
-- Dynamic Script - We can create a script and append it to the document dynamically using JavaScript:
+- Dynamic Script - We can create a script and append it to the document dynamically using JavaScript. Dynamic scripts behave as “async” by default
 ```js
 function loadScript(src) {
   let script = document.createElement('script');
