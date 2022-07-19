@@ -38,6 +38,63 @@ JavaScript can be added to a web page in three different ways:
 - External script - <script src="introduction.js"></script>
 - Multiple External scripts - 
 
+### Export and Import 
+
+#### References
+https://javascript.info/import-export
+
+#### Export before declarations
+```js
+// export an array
+export let months = ['Jan', 'Feb', 'Mar','Apr', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+// export a constant
+export const MODULES_BECAME_STANDARD_YEAR = 2015;
+
+// export a class
+export class User {
+  constructor(name) {
+    this.name = name;
+  }
+}
+
+// export class as default class
+export default class User { // just add "default"
+  constructor(name) {
+    this.name = name;
+  }
+}
+
+// if i dont put export keyword in front of class/function/variable
+function sayHi(user) {
+  alert(`Hello, ${user}!`);
+}
+
+function sayBye(user) {
+  alert(`Bye, ${user}!`);
+}
+
+export {sayHi, sayBye}; // a list of exported variables
+
+```
+#### Import 
+```js
+
+import User from './user.js'; // not {User}, just User. When it is default expor
+
+import {sayHi, sayBye} from './say.js';
+sayHi('John'); // Hello, John!
+
+// or
+import {sayHi as hi, sayBye as bye} from './say.js';
+hi('John'); // Hello, John!
+
+// or 
+import * as say from './say.js';
+say.hi('John'); // Hello, John!
+
+```
+
 
 
 
