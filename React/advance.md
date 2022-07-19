@@ -281,6 +281,8 @@ class Header extends React.Component {
     )
   }
 }
+
+// Accessing Header components same way
 const App = () => {
   const data = {
     welcome: 'Welcome to 30 Days Of React',
