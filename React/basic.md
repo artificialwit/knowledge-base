@@ -50,6 +50,44 @@ https://reactjs.org/docs/getting-started.html
   - Functional Component / Presentational Component / Stateless Component / Dumb Component
   - Class Component / Container Component/ Statefull Component / Smart Component
 
+### React App structure
+- use CamelCase file name for all components. use descriptive long name.
+- I found it easy to put all images, icons and fonts in the assets folder and all CSS style sheets in styles folder. All components will be in the components folder.
+
+## Components Folder
+
+Inside the src directory will pull all the components
+
+```sh
+src
+  App.js
+  index.js
+  components
+   -auth
+    -Signup.js
+    -Signin.js
+    -Forgotpassword.js
+    -Resetpassord.js
+  header
+   -Header.js
+  footer
+   -Footer.js
+  assets
+   -images
+   -icnons
+   - fonts
+  styles
+   -button.js
+   -button.scss
+ utils
+  -random-id.js
+  -display-time.js
+  -generate-color.js
+ shared
+  -Button.js
+  -InputField.js
+  -TextAreaField.js
+```
 
 
 
