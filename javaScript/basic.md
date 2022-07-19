@@ -20,5 +20,24 @@
   - console.clear()
   - console.assert(i>2)
   - console.info('data is saved.')
+  - console.log(3 ** 2) // Exponentiation 3 ** 2 == 3 * 3
+
+## Variable
+variable - We use var, let and const to declare a variable. The var is functions scope, however let and const are block scope. In this challenge we use ES6 and above features of JavaScript. Avoid using var
+
+## Array
+Array in JS - Array is a class and can use its constructor - const arr = Array(), Or let arr= []
 
 ## Loop
+
+## Script
+
+JavaScript can be added to a web page in three different ways:
+- Inline script - <button onclick="alert('Welcome to 30DaysOfJavaScript!')">Click Me</button>
+- Internal script - can be written in the head or the body  
+- External script - <script src="introduction.js"></script>
+- Multiple External scripts - 
+
+
+
+
