@@ -233,6 +233,11 @@ ReactDOM.render(<App />, rootElement)
 class based components used to have state and life cycle methods. However, after React version 16.8.0 functional components can have state and life cycle using React Hooks.
 Class based React component is a child of React.Component and it has a built-in render method and it may have a constructor.
 ```js
+
+// index.js
+import { createRoot } from "react-dom/client";
+import React from 'react'
+
 // Functional component
 
 const Header = ({
@@ -302,5 +307,7 @@ const App = () => {
   )
 }
 
+const root = createRoot(document.getElementById("root"));
+root.render(<App />);
 
 ```
