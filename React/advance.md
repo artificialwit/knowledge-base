@@ -321,3 +321,45 @@ const root = createRoot(document.getElementById("root"));
 root.render(<App />);
 
 ```
+
+## States
+state is the particular condition that someone or something is in at a specific time. State is an object in react which let the component re-render when state data changes.
+We set an initial state inside the constructor or outside the constructor of a class based component. We do not directly change or mutate the state but we use the setState() method to reset to a new state. . As you can see below in the state object we have count with initial value 0. We can access the state object using this.state and the property name.
+
+```js
+class App extends React.Component {
+  // declaring state
+  state = {
+    count: 0,
+  }
+  // method which add one to the state
+
+  addOne = () => {
+    this.setState({ count: this.state.count + 1 })
+  }
+
+  // method which subtract one to the state
+  minusOne = () => {
+    this.setState({ count: this.state.count - 1 })
+  }
+  render() {
+    // accessing the state value
+    const count = this.state.count
+    return (
+      <div className='App'>
+        <h1>{count} </h1>
+
+        <div>
+          <button className='btn btn-add' onClick={this.addOne}>
+            +1
+          </button>{' '}
+          <button className='btn btn-minus' onClick={this.minusOne}>
+            -1
+          </button>
+        </div>
+      </div>
+    )
+  }
+}
+```
+
