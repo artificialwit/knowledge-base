@@ -2,7 +2,7 @@
 
 #### Get List of column of table type
 ```sql
-DECLARE @tableTypeName VARCHAR(100) = 'tvpControl';
+DECLARE @tableTypeName VARCHAR(100) = 'tvpEmployeeTableType';
 
 SELECT t.name [TableTypeName],
        SCHEMA_NAME(t.schema_id) [SchemaName],
