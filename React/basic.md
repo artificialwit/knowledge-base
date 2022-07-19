@@ -25,3 +25,32 @@ To summarize:
   - npm run build // creates a build directory with a production build of your app
 
 
+### React using js reference library
+
+Babel will transpile the react JSX to pure JavaScript on the browser. In JSX element we write className instead of class because class is a reserved word in JavaScript. Similar to className, htmlFor instead of for in label tag. To inject data to a JSX we use the {} bracket
+
+```html
+https://reactjs.org/docs/getting-started.html
+<body>
+    <div class="root"></div>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      // our code goes here
+    </script>
+  </body>
+```
+
+### Module 
+- A single or multiple functions, that can be exported and imported when needed, can be included in a project. In React we do not use link to access modules or packages. 
+- React and ReactDOM we need babel to transpile the JSX to JavaScript code. The ReactDOM package has a method render. The render method takes two arguments:a JSX element or a component and the root document.
+- A Package is a module or a collection of modules. For instance, React, ReactDOM are packages.
+- NPM was created in 2010. You do not need to install NPM separately - when you install node you will have also NPM. NPM is a default package manager for Node.js. It allows users to consume and distribute JavaScript modules that are available in the registry. NPM allows to create packages, use packages and distribute packages
+- React allows us to write JSX and ReactDOM to render the JSX on the DOM
+- React component is made of JavaScript functions or classes. A React component is a small, reusable code, which is responsible for one part of the application UI.Components can be:
+  - Functional Component / Presentational Component / Stateless Component / Dumb Component
+  - Class Component / Container Component/ Statefull Component / Smart Component
+
+
+
+
+
