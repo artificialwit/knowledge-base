@@ -272,15 +272,25 @@ class Header extends React.Component {
     // the code inside the constructor run before any other code
   }
   render() {
+    console.log(this.props.data)
+    const {
+      welcome,
+      title,
+      subtitle,
+      author: { firstName, lastName },
+      date,
+    } = this.props.data
+
     return (
       <header>
         <div className='header-wrapper'>
-          <h1>{this.props.data.welcome}</h1>
-          <h2>{this.props.data.title}</h2>
-          <h3>
-            {this.props.data.author.firstName} {this.props.data.author.lastName}
-          </h3>
-          <small>{this.props.data.date}</small>
+          <h1>{welcome}</h1>
+          <h2>{title}</h2>
+          <h3>{subtitle}</h3>
+          <p>
+            {firstName} {lastName}
+          </p>
+          <small>{date}</small>
         </div>
       </header>
     )
