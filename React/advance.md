@@ -234,17 +234,30 @@ class based components used to have state and life cycle methods. However, after
 Class based React component is a child of React.Component and it has a built-in render method and it may have a constructor.
 ```js
 // Functional component
-const Header = () => (
-  <header>
-    <div className='header-wrapper'>
-      <h1>Welcome to 30 Days Of React</h1>
-      <h2>Getting Started React</h2>
-      <h3>JavaScript Library</h3>
-      <p>Asabeneh Yetayeh</p>
-      <small>Oct 6, 2020</small>
-    </div>
-  </header>
-)
+
+const Header = ({
+  data: {
+    welcome,
+    title,
+    subtitle,
+    author: { firstName, lastName },
+    date,
+  },
+}) => {
+  return (
+    <header>
+      <div className='header-wrapper'>
+        <h1>{welcome}</h1>
+        <h2>{title}</h2>
+        <h3>{subtitle}</h3>
+        <p>
+          {firstName} {lastName}
+        </p>
+        <small>{showDate(date)}</small>
+      </div>
+    </header>
+  )
+}
 
 // class based component
 
