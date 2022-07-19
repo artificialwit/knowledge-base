@@ -587,3 +587,64 @@ class App extends React.Component {
 }
 ```
 
+### Fragments
+Fragments are a way to avoid unnecessary parent element in JSX. Let's implement a fragment. We import fragment from react module. As you can see below, we imported React and fragment together by use a comma separation.
+
+```js
+import React, { Fragment } from 'react'
+
+const Skills = () => {
+  return (
+    <Fragment>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </Fragment>
+  )
+}
+// Or
+
+const Skills = () => {
+  return (
+    <React.Fragment>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </React.Fragment>
+  )
+}
+
+// Or
+
+// Recommended
+const Skills = () => {
+  return (
+    <>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </>
+  )
+}
+const RequiredSkills = () => {
+  return (
+    <ul>
+      <Skills />
+    </ul>
+  )
+}
+
+```
+
+When we make a class-based component we have been using React.Component instead we can just import the component and the code will look more clean. Let's see an example.
+
+```js
+import React, { Component } from 'react'
+
+// This is recommended
+class App extends Component {
+  render() {
+    return <h1> 30 Days of React </h1>
+  }
+}
+```
