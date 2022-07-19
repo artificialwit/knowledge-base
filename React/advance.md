@@ -1,6 +1,32 @@
 # Advance
 
-## What is props?
+## Components
+A React component is a small, reusable code, which is responsible for one part of the application UI. A React application is an aggregation of components. React can help us to build reusable components. The following diagram shows different components. All the components have different border colors. In React we assemble different components together to create an application. We use JavaScript functions or classes to make components. If we use a function, the component will be a functional component, but if we use a class, the component will be a class-based component.
+
+Components can be:
+
+- Functional Component / Presentational Component / Stateless Component / Dumb Component
+- Class Component / Container Component/ Statefull Component / Smart Component
+
+
+## Functional Component
+```js
+const Header = () => {
+  return (
+    <header style={headerStyles}>
+      <div className='header-wrapper'>
+        <h1>Welcome to 30 Days Of React</h1>
+        <h2>Getting Started React</h2>
+        <h3>JavaScript Library</h3>
+        <p>Asabeneh Yetayeh</p>
+        <small>Oct 3, 2020</small>
+      </div>
+    </header>
+  )
+}
+```
+
+### What is props in Functional components?
 Props is a special keyword in React that stands for properties and is being used to pass data from one component to another and mostly from parent component to child component.
 functions with parameters are smart and they can take dynamic data likewise props is a way we pass data or parameter to a component
 
@@ -200,4 +226,39 @@ const App = () => {
 }
 const rootElement = document.getElementById('root')
 ReactDOM.render(<App />, rootElement)
+```
+
+
+## Class Component
+class based components used to have state and life cycle methods. However, after React version 16.8.0 functional components can have state and life cycle using React Hooks.
+Class based React component is a child of React.Component and it has a built-in render method and it may have a constructor.
+```js
+// Functional component
+const Header = () => (
+  <header>
+    <div className='header-wrapper'>
+      <h1>Welcome to 30 Days Of React</h1>
+      <h2>Getting Started React</h2>
+      <h3>JavaScript Library</h3>
+      <p>Asabeneh Yetayeh</p>
+      <small>Oct 6, 2020</small>
+    </div>
+  </header>
+)
+// class based component
+class Header extends React.Component {
+  render() {
+    return (
+      <header>
+        <div className='header-wrapper'>
+          <h1>Welcome to 30 Days Of React</h1>
+          <h2>Getting Started React</h2>
+          <h3>JavaScript Library</h3>
+          <p>Asabeneh Yetayeh</p>
+          <small>Oct 7, 2020</small>
+        </div>
+      </header>
+    )
+  }
+}
 ```
