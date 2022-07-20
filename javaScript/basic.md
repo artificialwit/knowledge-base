@@ -75,6 +75,11 @@ function sayBye(user) {
 }
 
 export {sayHi, sayBye}; // a list of exported variables
+//or 
+export {sayHi as hi, sayBye as bye};
+or 
+// re-export the default export as User
+export {default as User} from './user.js';
 
 ```
 #### Import 
