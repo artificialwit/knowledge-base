@@ -192,9 +192,12 @@ console.log(sum(2,3));
     <div id="pdfViewer"></div>
     <script src="./pdfobject.js"></script>
     <script>
-      PDFObject.embed("SOP.pdf", "#pdfViewer");
+      if (PDFObject.supportsPDFs) {
+        PDFObject.embed("SOP.pdf", "#pdfViewer");
+      }
     </script>
   </body>
 </html>
+
 
 ```
