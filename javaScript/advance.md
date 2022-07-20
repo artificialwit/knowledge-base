@@ -146,6 +146,8 @@ addGlobalEventListner("click", "div", (e) => {
 ```
 
 ### Hoisting
+Hoisting is JavaScript's default behavior of moving declarations to the top.
+https://www.youtube.com/watch?v=EvfRXyKa_GI
 whenever we use function or var keyword to create a variable or function in whole script. javascript basically moved that code on top of the script file.
 that is called hoisting. thats why if i declare function after i called , it works. in case variable it is initialise with undefined. we cannot call arrow function before declaring it. that is major difference between arrow function and creating function using funciton keyword.
 ```js
