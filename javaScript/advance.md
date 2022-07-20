@@ -174,5 +174,28 @@ return a+b;
  z=10;
 console.log(sum(2,3));
 
+```
+
+### PDF Viewer
+```js
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PDF Viewer</title>
+    <style>
+      .pdfobject-container {
+        height: 30rem;
+        border: 1rem solid rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="pdfViewer"></div>
+    <script src="./pdfobject.js"></script>
+    <script>
+      PDFObject.embed("SOP.pdf", "#pdfViewer");
+    </script>
+  </body>
+</html>
 
 ```
