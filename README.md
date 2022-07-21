@@ -12,3 +12,11 @@ To promote your product , you must have integraiton with other popular product t
 
 ### To learn Javascript
 - [javascript.info](https://javascript.info) : The Modern JavaScript Tutorial
+
+
+### Five projects to show my portfolio
+- Website have connetced with open third party api like food restaurent etc. CRUD operaiton
+- A brocher site, to show case a portfolio, landing page, barber shop high converting landing page.
+- a backend application, like simple e-commerce webaite, having security, payment etc.
+- build my own portfolio site about myself, my skills , my resume, creativity, visual design. creazy animation. flashy, good looking
+- A simple game, like chess 
