@@ -1,4 +1,4 @@
-#Forms
+# Forms
 
 We encounter different form fields when we fill a form such as simple text, email, password, telephone, date, checkbox, radio button, option selection and text area field. Currently, HTML5 has provide quite a lot of field types. You may have a look at the following available HTML5 input types.
 Client side validation can be implemented using HTML5 built-in validation or using JavaScript(using regular expression)
