@@ -100,6 +100,9 @@
 How Would You Do This Without Affecting The Children Tables?
 Name any three funciton in sql and usages?
 
+### CLR functions 
+can be used to access external resources such as files, network resources, Web Services, other databases (including remote instances of SQL Server). This can be achieved by using various classes in the .NET Framework, such as System.IO, System.WebServices, System.Sql, and so on. The assembly that contains such functions should at least be configured with the EXTERNAL_ACCESS permission set for this purpose. For more information, see CREATE ASSEMBLY (Transact-SQL).
+
 ### Machine test for CTE
 
 ```sql
