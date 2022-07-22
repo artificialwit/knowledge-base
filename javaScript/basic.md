@@ -102,6 +102,79 @@ say.hi('John'); // Hello, John!
 
 ```
 
+#### GET / POST Web Request 
+
+```js
+// index.js
+import "./styles.css";
+import { urls } from "./app_urls.js";
+
+let myHeaders = new Headers();
+
+// in case of auth request
+myHeaders.append("Authorization", "Bearer asfaggagagagadgag");
+// in case of json request data post
+
+// in case of post method
+let requestData = JSON.stringify({
+  firstName: "Pratul"
+});
+
+let methodType = "GET";
+let requestOptions;
+
+if (methodType === "GET") {
+  requestOptions = {
+    method: methodType,
+    headers: myHeaders
+    //body: requestData // "GET method cannot have body, so use only when method type is POST"
+  };
+}
+if (methodType === "POST") {
+  myHeaders.append("Content-Type", "application/json");
+  requestOptions = {
+    method: methodType,
+    headers: myHeaders,
+    body: requestData
+  };
+}
+
+fetch(urls.employees, requestOptions)
+  .then((res) => res.text())
+  .then((data) => {
+    let employees = JSON.parse(data).employees;
+    //console.log(employees);
+    employees.forEach((emp) => {
+      let ul = document.querySelector("ul");
+      let li = document.createElement("li");
+      li.innerHTML = "<li>" + emp.firstName + "</li>";
+      ul.appendChild(li);
+    });
+  })
+  .catch((err) => console.log("Error :", err));
+
+
+```
+
+```js
+// app_urls.js
+export const urls = {
+  employees: "data/employees.json"
+};
+
+```
+
+```js
+// data/employees.json
+{
+  "employees": [
+    { "firstName": "Pratul", "lastName": "Dwivedi" },
+    { "firstName": "Manish", "lastName": "Adwani" },
+    { "firstName": "Karam", "lastName": "Sharma" }
+  ]
+}
+```
+
 
 
 
