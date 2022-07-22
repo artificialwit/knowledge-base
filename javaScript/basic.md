@@ -106,52 +106,71 @@ say.hi('John'); // Hello, John!
 
 ```js
 // index.js
+
 import "./styles.css";
 import { urls } from "./app_urls.js";
 
-let myHeaders = new Headers();
+listEmployees();
 
-// in case of auth request
-myHeaders.append("Authorization", "Bearer asfaggagagagadgag");
-// in case of json request data post
-
-// in case of post method
-let requestData = JSON.stringify({
-  firstName: "Pratul"
-});
-
-let methodType = "GET";
-let requestOptions;
-
-if (methodType === "GET") {
-  requestOptions = {
-    method: methodType,
-    headers: myHeaders
-    //body: requestData // "GET method cannot have body, so use only when method type is POST"
+async function listEmployees() {
+  let requestJsonData = {
+    firstName: "Pratul"
   };
-}
-if (methodType === "POST") {
-  myHeaders.append("Content-Type", "application/json");
-  requestOptions = {
-    method: methodType,
-    headers: myHeaders,
-    body: requestData
-  };
-}
-
-fetch(urls.employees, requestOptions)
-  .then((res) => res.text())
-  .then((data) => {
-    let employees = JSON.parse(data).employees;
-    //console.log(employees);
-    employees.forEach((emp) => {
+  let authToken = "asfaggagagagadgag";
+  let responseJsonData = await httpRequest(
+    urls.employees,
+    "GET",
+    authToken,
+    requestJsonData
+  );
+  //console.log(responseData);
+  if (responseJsonData.isSuccess) {
+    responseJsonData.data.forEach((emp) => {
       let ul = document.querySelector("ul");
       let li = document.createElement("li");
-      li.innerHTML = "<li>" + emp.firstName + "</li>";
+      li.innerHTML = "<li>" + emp.firstName + " " + emp.lastName + "</li>";
       ul.appendChild(li);
     });
-  })
-  .catch((err) => console.log("Error :", err));
+  }
+}
+
+async function httpRequest(url, methodType, authToken, requestJsonData) {
+  let myHeaders = new Headers();
+
+  // in case of auth request
+  if (authToken !== "") {
+    myHeaders.append("Authorization", "Bearer " + authToken);
+  }
+
+  let requestOptions;
+
+  if (methodType === "GET") {
+    requestOptions = {
+      method: methodType,
+      headers: myHeaders
+      //body: requestData // "GET method cannot have body, so use only when method type is POST"
+    };
+  }
+  if (methodType === "POST") {
+    myHeaders.append("Content-Type", "application/json");
+    requestOptions = {
+      method: methodType,
+      headers: myHeaders,
+      body: JSON.stringify(requestJsonData)
+    };
+  }
+
+  let responseData = await fetch(url, requestOptions)
+    .then((res) => res.text())
+    .then((data) => {
+      let responseData = JSON.parse(data);
+      console.log(responseData.message, " Url is : ", url);
+      return responseData;
+    })
+    .catch((err) => console.log("Error :", err));
+
+  return responseData;
+}
 
 
 ```
@@ -166,13 +185,18 @@ export const urls = {
 
 ```js
 // data/employees.json
+
 {
-  "employees": [
+  "isSuccess": true,
+  "message": "Request is successfully executed.",
+  "statusCode": 200,
+  "data": [
     { "firstName": "Pratul", "lastName": "Dwivedi" },
     { "firstName": "Manish", "lastName": "Adwani" },
     { "firstName": "Karam", "lastName": "Sharma" }
   ]
 }
+
 ```
 
 
