@@ -167,7 +167,7 @@ async function httpRequest(url, methodType, authToken, requestJsonData) {
       console.log(responseData.message, " Url is : ", url);
       return responseData;
     })
-    .catch((err) => console.log("Error :", err));
+    .catch((err) => console.log("Error : ", url, " : " ,err));
 
   return responseData;
 }
