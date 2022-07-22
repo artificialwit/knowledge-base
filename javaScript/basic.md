@@ -111,13 +111,11 @@ Make sure when your import js file, use type="module"
   <head>
     <title>Artifial Wit</title>
     <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./src/styles.css" />
   </head>
-
   <body>
     <h1>Artifial Wit</h1>
-
     <ul></ul>
-
     <script type="module" src="src/index.js"></script>
   </body>
 </html>
@@ -127,7 +125,6 @@ Make sure when your import js file, use type="module"
 ```js
 // index.js
 
-import "./styles.css";
 import { urls } from "./app_urls.js";
 
 listEmployees();
