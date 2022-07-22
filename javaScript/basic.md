@@ -103,7 +103,27 @@ say.hi('John'); // Hello, John!
 ```
 
 #### GET / POST Web Request 
+Make sure when your import js file, use type="module"
+```html
+// index.html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Artifial Wit</title>
+    <meta charset="UTF-8" />
+  </head>
 
+  <body>
+    <h1>Artifial Wit</h1>
+
+    <ul></ul>
+
+    <script type="module" src="src/index.js"></script>
+  </body>
+</html>
+
+
+```
 ```js
 // index.js
 
