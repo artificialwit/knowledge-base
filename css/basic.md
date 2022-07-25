@@ -1,6 +1,13 @@
-# CSS Variable
+### CSS Variable
 
 ```css
+
+/* Global varibale in :root*/
+:root {
+  --main-bg-color: brown;
+}
+
+/* Local variable for this file level access */
 body {
     --nav-width: 200px;
     margin: 0 0 0 var(--nav-width);
