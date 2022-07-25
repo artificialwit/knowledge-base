@@ -39,3 +39,20 @@ WHERE t.is_user_defined = 1
 ```sql
     GETUTCDATE()
 ```
+
+### Find a text within all procedure 
+
+```sql
+ SELECT *
+          FROM sys.procedures
+          WHERE OBJECT_DEFINITION(object_id) LIKE '%token%'
+```
+
+### NULL IF and INULL function use
+
+```sql
+SELECT *
+FROM employees 
+    WHERE empId = ISNULL(NULLIF(@empId, 0), empId)
+    
+```
