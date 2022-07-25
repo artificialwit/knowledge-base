@@ -56,3 +56,8 @@ FROM employees
     WHERE empId = ISNULL(NULLIF(@empId, 0), empId)
     
 ```
+
+### UTC Date for multiple country product
+```sql
+    SET @TodayDate = GETUTCDATE();
+````
