@@ -39,7 +39,10 @@ RewriteRule ^([a-zA-Z0-9]+)$ index.html?path=$1
 ```
 
 
-```index.js
+```js
+
+// index.js
+
 window.onload = function () {
   const path = window.location.pathname.split("/");
   switch (path[1]) {
