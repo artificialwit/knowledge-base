@@ -31,7 +31,37 @@ p {
   color: red;
 }
 
+// Universal Selector - universal selector (*) selects all HTML elements on the page
+* {
+  text-align: center;
+  color: blue;
+}
+
+
+// Grouping Selector - selects all the HTML elements with the same style definitions
+h1, h2, p {
+  text-align: center;
+  color: red;
+}
+
 ```
+
+### Three Ways to Insert CSS
+There are three ways of inserting a style sheet:
+
+ - External CSS - <link rel="stylesheet" href="mystyle.css">
+ - Internal CSS - <style>
+            body {
+              background-color: linen;
+            }
+
+            h1 {
+              color: maroon;
+              margin-left: 40px;
+            }
+            </style>
+            
+ - Inline CSS - <h1 style="color:blue;text-align:center;">
 
 ### CSS Variable
 
