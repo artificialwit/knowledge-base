@@ -47,10 +47,17 @@ h1, h2, p {
 ```
 
 ### Three Ways to Insert CSS
+
 There are three ways of inserting a style sheet:
 
- - External CSS - <link rel="stylesheet" href="mystyle.css">
- - Internal CSS - <style>
+ - External CSS
+    ```css
+     <link rel="stylesheet" href="mystyle.css">
+    ```
+ - Internal CSS 
+ ```html
+ 
+ <style>
             body {
               background-color: linen;
             }
@@ -60,8 +67,12 @@ There are three ways of inserting a style sheet:
               margin-left: 40px;
             }
             </style>
-            
- - Inline CSS - <h1 style="color:blue;text-align:center;">
+ ````
+ - Inline CSS
+ 
+ ```html
+ <h1 style="color:blue;text-align:center;">
+```
 
 ### CSS Variable
 
