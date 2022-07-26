@@ -74,6 +74,55 @@ There are three ways of inserting a style sheet:
  <h1 style="color:blue;text-align:center;">
 ```
 
+### Color and background
+
+```html
+<html>
+  <head> </head>
+  <body>
+    <style>
+      h1 {
+        color: white;
+        text-align: center;
+        font-size: 20px;
+      }
+      p {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 20px;
+      }
+
+      body {
+        background-color: #ffffff;
+        background-image: url("img_tree.png");
+        background-repeat: no-repeat;
+        background-position: right top;
+      }
+      /*Or*/
+      body {
+        background: #ffffff url("img_tree.png") no-repeat right top;
+      }
+    </style>
+    <h1>FAI</h1>
+    <h1 style="background-color: tomato;">Tomato</h1>
+    <div>&nbsp</div>
+    <h1 style="background-color: mediumseagreen;">mediumseagreen</h1>
+    <div>&nbsp</div>
+    <h1 style="background-color: lightgray; color: black;">lightgray</h1>
+    <div>&nbsp</div>
+    <h1 style="background-color: dodgerblue;">dodgerblue</h1>
+    <div>&nbsp</div>
+    <h1 style="background-color: orange;">orange</h1>
+    <div>&nbsp</div>
+    <h1 style="background-color: slateblue;">slateblue</h1>
+    <h1 style="background-color: rgb(255, 99, 71, 0.4);">slateblue</h1>
+
+    <h1 style="background-color: #3cb371;">slateblue</h1>
+
+  </body>
+</html>
+
+```
+
 ### CSS Variable
 
 ```css
