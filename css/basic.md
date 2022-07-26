@@ -51,9 +51,9 @@ h1, h2, p {
 There are three ways of inserting a style sheet:
 
  - External CSS
-    ```css
-     <link rel="stylesheet" href="mystyle.css">
-    ```
+  ```css
+   <link rel="stylesheet" href="mystyle.css">
+  ```
  - Internal CSS 
  ```html
  
