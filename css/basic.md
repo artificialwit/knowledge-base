@@ -321,7 +321,7 @@ Best Web Safe Fonts for HTML and CSS
 
 
 ```html
-
+<head>
 /*Google Font*/
  <link
       rel="stylesheet"
