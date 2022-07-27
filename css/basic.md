@@ -411,4 +411,75 @@ a:active {
 ```
 
 
+### Table CSS
+
+```html
+<!DOCTYPE html>
+<html>
+  <body style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+    <style>
+      table {
+        border-collapse: collapse;
+        border: 1px solid grey;
+        width: 100%;
+      }
+      th {
+        background-color: #04aa6d;
+        color: white;
+        height: 10px;
+        padding: 15px;
+        border: 1px solid grey;
+        border-bottom: 1px solid #ddd;
+      }
+      td {
+        border-bottom: 1px solid #ddd;
+        height: 10px;
+        border: 1px solid grey;
+        vertical-align: bottom;
+        padding: 5px;
+      }
+      tr:hover {
+        background-color: lightgray;
+      }
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+    </style>
+    <div style="overflow-x: auto;">
+      <table>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Points</th>
+          <th>Points</th>
+          <th>Points</th>
+        </tr>
+        <tr>
+          <td>Jill</td>
+          <td>Smith</td>
+          <td>50</td>
+          <td>50</td>
+          <td>50</td>
+        </tr>
+        <tr>
+          <td>Eve</td>
+          <td>Jackson</td>
+          <td>94</td>
+          <td>94</td>
+          <td>94</td>
+        </tr>
+        <tr>
+          <td>Adam</td>
+          <td>Johnson</td>
+          <td>67</td>
+          <td>67</td>
+          <td>67</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
+
+```
+
 
