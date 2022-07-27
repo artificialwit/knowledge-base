@@ -362,3 +362,29 @@ h1.c {font-family: "Trirong", serif; text-shadow: 3px 3px 3px #ababab;}
 </html>
 
 ```
+
+### Link and states
+
+```html
+<style>
+/* unvisited link */
+a:link {
+  color: red;
+}
+
+/* visited link */
+a:visited {
+  color: green;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
+</style>
+```
