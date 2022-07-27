@@ -303,7 +303,7 @@ text-transform: uppercase;
 
 ```
 
-### Font
+### Font - Google Fonts
 
 Best Web Safe Fonts for HTML and CSS
 
@@ -318,11 +318,9 @@ Best Web Safe Fonts for HTML and CSS
 - Courier New (monospace)
 - Brush Script MT (cursive)
 
-
-
 ```html
 <head>
-/*Google Font*/
+
  <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong|Abril+Fatface|Poppins&effect=fire|neon|outline|emboss|shadow-multiple"
