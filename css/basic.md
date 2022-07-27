@@ -264,7 +264,7 @@ div {
 ### Text CSS
 
 ```css
-<style>
+
 div {
   border: 1px solid gray;
   padding: 8px;
@@ -300,5 +300,46 @@ text-decoration-line: overline underline;
 text-decoration-color: red;
 text-transform: uppercase;
 }
+
+```
+
+### Font
+
+Best Web Safe Fonts for HTML and CSS
+
+- Arial (sans-serif)
+- Verdana (sans-serif)
+- Helvetica (sans-serif)
+- Tahoma (sans-serif)
+- Trebuchet MS (sans-serif)
+- Times New Roman (serif)
+- Georgia (serif)
+- Garamond (serif)
+- Courier New (monospace)
+- Brush Script MT (cursive)
+
+
+
+```html
+
+/*Google Font*/
+ <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong|Abril+Fatface|Poppins&effect=fire|neon|outline|emboss|shadow-multiple"
+    />
+<style>
+  h1 {
+font-family: cursive;
+font-style: italic;
+font-weight: bold;
+font-size: 40px;
+}
+h1.a {font-family: "Audiowide", sans-serif;}
+h1.b {font-family: "Sofia", sans-serif;}
+h1.c {font-family: "Trirong", serif; text-shadow: 3px 3px 3px #ababab;}
 </style>
+</head>
+<body>
+<h1 class="font-effect-fire">My Company</h1>
+</body>
 ```
