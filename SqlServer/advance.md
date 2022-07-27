@@ -1,5 +1,12 @@
 # Advance
 
+#### ROW_NUMBER()
+```sql
+
+SELECT  ROW_NUMBER() OVER (PARTITION BY empType ORDER BY templateName), * FROM employees
+```
+
+
 #### Get List of column of table type
 ```sql
 DECLARE @tableTypeName VARCHAR(100) = 'tvpEmployeeTableType';
