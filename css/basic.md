@@ -343,3 +343,24 @@ h1.c {font-family: "Trirong", serif; text-shadow: 3px 3px 3px #ababab;}
 <h1 class="font-effect-fire">My Company</h1>
 </body>
 ```
+### Google Material Icons
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+  </head>
+  <body>
+    <i class="material-icons">cloud</i>
+    <i class="material-icons">favorite</i>
+    <i class="material-icons">attachment</i>
+    <i class="material-icons">computer</i>
+    <i class="material-icons">traffic</i>
+  </body>
+</html>
+
+```
