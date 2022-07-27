@@ -122,7 +122,10 @@ There are three ways of inserting a style sheet:
 </html>
 
 ```
-### Borders
+### Borders and Outlines
+- A border properties allow you to specify the style, width, and color of an element's border.
+- An outline is a line drawn outside the element's border. both have same kind of properties ie. border-style; border-width, outline-style; outline-width
+
 ```html
 <!DOCTYPE html>
 <html>
@@ -258,3 +261,44 @@ div {
 }
 ```
 
+### Text CSS
+
+```css
+<style>
+div {
+  border: 1px solid gray;
+  padding: 8px;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #4CAF50;
+}
+
+p {
+  text-indent: 50px;
+  text-align: justify;
+  text-align-last: right
+  letter-spacing: 3px;
+}
+
+a {
+  text-decoration: none;
+  color: #008CBA;
+}
+
+p {
+text-shadow: 2px 2px 4px red;
+letter-spacing: 5px;
+line-height: 1.8;
+text-indent: 50px; /*indentation of the first line of a text*/
+word-spacing: 10px;
+direction: rtl;
+text-align-last: justify;
+text-decoration-line: overline underline;
+text-decoration-color: red;
+text-transform: uppercase;
+}
+</style>
+```
