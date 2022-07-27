@@ -213,3 +213,26 @@ a {
 }
 
 ````
+
+### Margin and Padding
+- The CSS margin properties are used to create space around elements, outside of any defined borders.
+- Padding is used to create space around an element's content, inside of any defined borders.
+
+```css
+div {
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 80px;
+}
+
+p {
+  margin: 25px 50px 75px 100px;
+}
+* property with two values*/
+p {
+  margin: 25px 50px;
+}
+
+```
+
