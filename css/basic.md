@@ -388,3 +388,28 @@ a:active {
 }
 </style>
 ```
+
+
+### Ordered and Unorderd List
+
+```html
+<style>
+
+  ul {
+  background: #3399ff;
+  padding: 20px;
+  list-style-image: url('sqpurple.gif');
+}
+ul li {
+  list-style-position: outside|inside;
+  list-style-type: circle|square|upper-roman|lower-alpha;
+ background: #ffe5e5;
+  color: darkred;
+  padding: 5px;
+  margin-left: 35px;
+}
+</style>
+```
+
+
+
