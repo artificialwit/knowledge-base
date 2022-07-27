@@ -143,3 +143,39 @@ can be used to access external resources such as files, network resources, Web S
   GO
 
 ```
+
+#### What is the use of the SET NOCOUNT function?
+Ans: This function helps to stop the message that indicates how many rows are being affected while executing a T-SQL statement or stored procedure.
+
+The syntax for the function is given as:
+
+SET NOCOUNT { ON | OFF } 
+If you set this function ON, then no count is returned in the result set; on the other hand, if you set this function OFF, then count is returned.
+
+
+####  What do you mean by Magic Tables in SQL server?
+Ans: Magic tables are virtual tables that exist in two types – INSERTED AND DELETED. They hold the information of the newly INSERTED and DELETED rows. The INSERTED table will have the newly inserted rows on top of it. The DELETED tables will have the recently deleted rows on top of it on similar tracks. Magic tables are stored in tempDB.
+
+####  How can you prevent SQL injection vulnerabilities?
+Ans: We can prevent SQL injection vulnerabilities in the following ways:
+
+Using Type-Safe SQL parameters
+Using parameterized input with stored procedures
+Filtering inputs
+Reviewing codes
+Wrapping parameters
+
+
+####  How can you use HAVING and WHERE clauses in a single query?
+Ans: Generally, the WHERE Clause acts on individual rows, whereas the HAVING clause acts on groups. A SQL query can be constructed using the HAVING clause and WHERE clause. In that situation, WHERE Clause acts first based on the given conditions and groups rows in a table. Then, the HAVING clause acts on the groups and creates a result set only including the groups based on the given conditions.
+
+####  How can you hold the Stored Procedure scripts in the SQL server?
+Ans: We can store the stored procedure scripts in a server table known as Sys.SQL_Modules. Also, Sys. procedures table is used to store the name of the stored procedures.
+
+
+####  Differentiate EXCEPT and INTERSECT commands?
+Ans: These commands are used to return distinct rows by comparing the results of two separate queries.
+
+EXCEPT: operator allows returning distinct rows from the left input query only.
+
+INTERCEPT: operator allows returning distinct rows from both left and right input queries.
