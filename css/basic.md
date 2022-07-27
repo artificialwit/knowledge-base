@@ -229,9 +229,13 @@ div {
 p {
   margin: 25px 50px 75px 100px;
 }
-* property with two values*/
+/* property with two values*/
 p {
   margin: 25px 50px;
+}
+/* property with three values*/
+p {
+  margin: 25px 50px 75px;
 }
 
 ```
