@@ -30,7 +30,7 @@
   value result set.
   
 ###  How to delete column from the table?
-####  How to delete table in sql server
+###  How to delete table in sql server
 
 ### SQL Commands are case sensitive or not
   No, sql commands are not case sensitive.
