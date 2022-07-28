@@ -68,3 +68,9 @@ FROM employees
 ```sql
     SET @TodayDate = GETUTCDATE();
 ````
+
+
+### New GUID
+```sql
+SELECT NEWID()
+```
