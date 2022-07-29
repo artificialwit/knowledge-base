@@ -201,3 +201,61 @@ console.log(sum(2,3));
 
 
 ```
+
+
+### Single Page Applicaiton
+
+```js
+// route.js
+
+const route = (event) => {
+    event = event || window.event;
+    event.preventDefault();
+    window.history.pushState({}, "", event.target.href);
+    handleLocation();
+};
+
+const routes = {
+    404: "/pages/404.html",
+    "/": "/pages/index.html",
+    "/about": "/pages/about.html",
+    "/lorem": "/pages/lorem.html",
+};
+
+const handleLocation = async () => {
+    const path = window.location.pathname;
+    const route = routes[path] || routes[404];
+    const html = await fetch(route).then((data) => data.text());
+    document.getElementById("main-page").innerHTML = html;
+};
+
+window.onpopstate = handleLocation;
+window.route = route;
+
+handleLocation();
+```
+```html
+/* index.html*/
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vanilla SPA Router</title>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <div id="root">
+            <nav id="main-nav" class="sidebar">
+                <a href="/" onclick="route()">Home</a>
+                <a href="/about" onclick="route()">About</a>
+                <a href="/lorem" onclick="route()">Lorem</a>
+            </nav>
+            <div id="main-page"></div>
+        </div>
+
+        <script src="js/router.js"></script>
+    </body>
+</html>
+```
