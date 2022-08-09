@@ -145,6 +145,80 @@ addGlobalEventListner("click", "div", (e) => {
 
 ```
 
+### Online and Offline mode
+```html
+<body>
+ <script>
+  window.addEventListener("offline", ()=>{
+  alert("offline mode");
+  
+  });
+   window.addEventListener("online", ()=>{
+  alert("online mode");
+  
+  });
+ </script>
+</body>
+
+// we can make chrome browser offline | no throttling for offline and online in network tab
+```
+
+
+### hashchange (when we put # in href) event
+```html
+<body>
+ <script>
+  window.addEventListener("hashchange", ()=>{
+    console.log("change new hash tag");
+  console.log(location);
+  
+  });
+ 
+ </script>
+</body>
+
+```
+
+### transition - event when transition css applied
+```html
+<body>
+ <script>
+  div.addEventListener("transitionend", ()=>{
+    console.log("applied new css prpd");
+  
+  });
+ 
+ </script>
+</body>
+
+```
+### Image load event
+```html
+<body>
+ <script>
+  imgTag.addEventListener("load", ()=>{
+    console.log("Image is loaded");
+  
+  });
+ 
+ </script>
+</body>
+
+```
+### Image load event
+```html
+<body>
+ <script>
+  window.addEventListener("scroll", ()=>{
+    console.log(window.scrollY);
+  
+  });
+ 
+ </script>
+</body>
+
+```
+
 ### Hoisting
 Hoisting is JavaScript's default behavior of moving declarations to the top.
 https://www.youtube.com/watch?v=EvfRXyKa_GI
