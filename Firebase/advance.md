@@ -2,6 +2,8 @@
 
 #### Firebase push notification
 
+Reference : https://medium.com/android-school/test-fcm-notification-with-postman-f91ba08aacc3
+
 Send Firebase push notification from postman. First create a legacy server key or web app key depends on version .
 Provide that key on header section. and POST on https://fcm.googleapis.com/fcm/send
 
@@ -16,7 +18,7 @@ Authorization:key=AAAAE566IeA:APA91bGgHuItwR-BkOlD2DMtQihEG5n4N-N5vgL0I4tUh.....
     "collapse_key": "type_a",
     "notification": {
         "body": "My Notification body",
-        "title": "My Notification Title
+        "title": "My Notification Title"
     },
     "data": {
         "body": "Body to pass in data to take action on notification tap",
