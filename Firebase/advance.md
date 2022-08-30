@@ -2,7 +2,10 @@
 
 #### Firebase push notification
 
-Reference : https://medium.com/android-school/test-fcm-notification-with-postman-f91ba08aacc3
+Reference : 
+
+https://medium.com/android-school/test-fcm-notification-with-postman-f91ba08aacc3  
+https://firebase.google.com/docs/cloud-messaging/http-server-ref#table1
 
 Send Firebase push notification from postman. First create a legacy server key or web app key depends on version .
 Provide that key on header section. and POST on https://fcm.googleapis.com/fcm/send
