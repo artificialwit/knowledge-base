@@ -273,11 +273,20 @@ $.b	 | NULL or error |	[1,2]
 $.b[0] | 	1 |	NULL or error
 $.c | 	hi |	NULL or error
 
-### Update a JSON column
+### JSON_MODIFY
 ```sql
 JSON_MODIFY ( expression , path , newValue )  
 
 UPDATE Employee
 SET jsonCol=JSON_MODIFY(jsonCol,'$.info.address.town','London')
 WHERE EmployeeID=17
+```
+
+### JSON_PATH_EXISTS
+```sql
+DECLARE @jsonInfo NVARCHAR(MAX)
+
+SET @jsonInfo=N'{"info":{"address":[{"town":"Paris"},{"town":"London"}]}}';
+
+SELECT JSON_PATH_EXISTS(@jsonInfo,'$.info.address'); -- 1
 ```
