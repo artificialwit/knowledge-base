@@ -74,3 +74,77 @@ FROM employees
 ```sql
 SELECT NEWID()
 ```
+
+
+### SQL Templating and PIVOT using json
+
+```sql
+  
+CREATE PROC usp_GetRenderedTemplates  
+(  
+    @DataSql NVARCHAR(MAX) = '', -- Either provide @DataSql or @JsonData with array brackets  
+    @JsonData NVARCHAR(MAX) = '',  
+    @TemplateHeader NVARCHAR(MAX) = '',  
+    @TemplateBody NVARCHAR(MAX) = '',  
+    @TemplateFooter NVARCHAR(MAX) = ''  
+)  
+AS  
+BEGIN  
+
+  
+ IF @DataSql = ''  
+       AND @JsonData = ''  
+    BEGIN  
+        RAISERROR('Please provide either @DataSql string or @JsonData.', 16, 1);  
+  RETURN;  
+    END;  
+  
+    DECLARE @MarkedKey NVARCHAR(100),  
+            @SqlString NVARCHAR(MAX),  
+            @KeyValue NVARCHAR(MAX);  
+  
+    IF @DataSql <> ''  
+    BEGIN  
+        SET @SqlString = N'SET @JsonData = (' + @DataSql + N' FOR JSON PATH)';  
+  
+        EXEC sp_executesql @SqlString,  
+                           N'@JsonData NVARCHAR(MAX) OUTPUT',  
+                           @JsonData = @JsonData OUTPUT;  
+    END;  
+     
+  
+    SELECT @JsonData AS jsondata;  
+    -- to get first value  
+    SELECT @JsonData = Value  
+    FROM OPENJSON(@JsonData);  
+  
+  
+    DECLARE jsonDataCursor CURSOR FOR  
+    SELECT '{{' + [Key] + '}}' AS markedKey,  
+           Value  
+    FROM OPENJSON(@JsonData);  
+  
+    OPEN jsonDataCursor;  
+    FETCH NEXT FROM jsonDataCursor  
+    INTO @MarkedKey,  
+         @KeyValue;  
+  
+    WHILE @@FETCH_STATUS = 0  
+    BEGIN  
+        SET @TemplateHeader = REPLACE(@TemplateHeader, @MarkedKey, @KeyValue);  
+        SET @TemplateBody = REPLACE(@TemplateBody, @MarkedKey, @KeyValue);  
+        SET @TemplateFooter = REPLACE(@TemplateFooter, @MarkedKey, @KeyValue);  
+        FETCH NEXT FROM jsonDataCursor  
+        INTO @MarkedKey,  
+             @KeyValue;  
+    END;  
+  
+    CLOSE jsonDataCursor;  
+    DEALLOCATE jsonDataCursor;  
+  
+    SELECT @TemplateHeader AS TemplateHeader,  
+           @TemplateBody AS TemplateBody,  
+           @TemplateFooter AS TemplateFooter;  
+  
+END;
+```
