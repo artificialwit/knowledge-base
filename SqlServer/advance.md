@@ -202,6 +202,17 @@ BEGIN
 END;
 ```
 
+### ISJSON
+
+- VALUE	Tests for a valid JSON value. This can be a JSON object, array, number, string or one of the three literal values (false, true, null)
+- ARRAY	Tests for a valid JSON array
+- OBJECT	Tests for a valid JSON object
+- SCALAR	Tests for a valid JSON scalar – number or string
+```sql
+SELECT ISJSON('"test string"', SCALAR)
+```
+
+
 ### JSON_OBJECT
 
 ```sql
