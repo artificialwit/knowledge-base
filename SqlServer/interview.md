@@ -1,5 +1,11 @@
 # Interview
 
+## PARSE() vs CAST() vs CONVERT() in SQL Server: What’s the Difference?
+Use PARSE only for converting from string to date/time and number types. For general type conversions, continue to use CAST or CONVERT. Keep in mind that there is a certain performance overhead in parsing the string value.
+
+https://database.guide/parse-vs-cast-vs-convert-in-sql-server-whats-the-difference/
+
+
 ## What is difference between count and count (*)
   1. Count function require column to count data but count (*) will count all rows
   2. Count function do not count NULL values in column but count (*) will count all rows whether
