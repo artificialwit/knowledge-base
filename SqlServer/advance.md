@@ -247,3 +247,11 @@ WHERE s.is_user_process = 1;
     SELECT @FCMResponseID = JSON_VALUE(@ResponseJson, '$.results[0].message_id');
 
 ```
+This example assumes that a table named Person.Person contains a jsonInfo column of JSON text
+```sql
+SELECT FirstName, LastName,
+ JSON_VALUE(jsonInfo,'$.info.address.town') AS Town
+FROM Person.Person
+WHERE JSON_VALUE(jsonInfo,'$.info.address.state') LIKE 'US%'
+ORDER BY JSON_VALUE(jsonInfo,'$.info.address.town')
+````
