@@ -77,6 +77,7 @@ SELECT NEWID()
 
 
 ### SQL Templating and PIVOT using json
+An example of OPENJSON , Cursor and dynamic sql with parameter 
 
 ```sql
   
