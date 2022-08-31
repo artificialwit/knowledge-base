@@ -234,3 +234,12 @@ WHERE s.is_user_process = 1;
 
 
 ```
+
+### JSON_VALUE
+
+```sql
+
+    SELECT @SuccessStatus = JSON_VALUE(@ResponseJson, '$.success');
+    SELECT @FCMResponseID = JSON_VALUE(@ResponseJson, '$.results[0].message_id');
+
+```
