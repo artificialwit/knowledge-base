@@ -201,3 +201,25 @@ BEGIN
   
 END;
 ```
+
+### JSON_OBJECT
+
+```sql
+SELECT JSON_OBJECT('name':'value', 'type':1)
+
+--{"name":"value","type":1}
+
+SELECT JSON_OBJECT('name':'value', 'type':NULL ABSENT ON NULL)
+
+--{"name":"value"}
+
+SELECT JSON_OBJECT('name':'value', 'type':JSON_ARRAY(1, 2))
+
+-- {"name":"value","type":[1,2]}
+
+SELECT s.session_id, JSON_OBJECT('security_id':s.security_id, 'login':s.login_name, 'status':s.status) as info
+FROM sys.dm_exec_sessions AS s
+WHERE s.is_user_process = 1;
+
+
+```
