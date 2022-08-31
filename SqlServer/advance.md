@@ -272,3 +272,12 @@ $.a	 |[1,2]	| NULL or error
 $.b	 | NULL or error |	[1,2]
 $.b[0] | 	1 |	NULL or error
 $.c | 	hi |	NULL or error
+
+### Update a JSON column
+```sql
+JSON_MODIFY ( expression , path , newValue )  
+
+UPDATE Employee
+SET jsonCol=JSON_MODIFY(jsonCol,'$.info.address.town','London')
+WHERE EmployeeID=17
+```
