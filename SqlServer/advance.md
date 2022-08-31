@@ -237,6 +237,10 @@ WHERE s.is_user_process = 1;
 
 ### JSON_VALUE
 
+```json
+{"multicast_id":7037728382576867291,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1661961941672938%0dc0a11e0dc0a11e"}]}
+```
+
 ```sql
 
     SELECT @SuccessStatus = JSON_VALUE(@ResponseJson, '$.success');
