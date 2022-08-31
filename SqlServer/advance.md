@@ -255,3 +255,20 @@ FROM Person.Person
 WHERE JSON_VALUE(jsonInfo,'$.info.address.state') LIKE 'US%'
 ORDER BY JSON_VALUE(jsonInfo,'$.info.address.town')
 ````
+
+### Compare JSON_VALUE and JSON_QUERY
+The key difference between JSON_VALUE and JSON_QUERY is that JSON_VALUE returns a scalar value, while JSON_QUERY returns an object or an array
+```json
+{
+	"a": "[1,2]",
+	"b": [1, 2],
+	"c": "hi"
+}
+```
+Path | JSON_VALUE  returns |	JSON_QUERY returns
+--- | --- | --- 
+$	| NULL or error |	{ "a": "[1,2]", "b": [1,2], "c":"hi"}
+$.a	 |[1,2]	| NULL or error
+$.b	 | NULL or error |	[1,2]
+$.b[0] | 	1 |	NULL or error
+$.c | 	hi |	NULL or error
