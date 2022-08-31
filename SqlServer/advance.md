@@ -42,9 +42,15 @@ WHERE t.is_user_defined = 1
     SELECT COALESCE(NULL, NULL, NULL, 'W3Schools.com', NULL, 'Example.com');
 ```
 
-### To get current date from database, must use
+### @@IDENTITY and SCOPE_IDENTITY()
+The Sales.Customer table has a maximum identity value of 29483. If you insert a row into the table, @@IDENTITY and SCOPE_IDENTITY() return different values. SCOPE_IDENTITY() returns the value from the insert into the user table, whereas @@IDENTITY returns the value from the insert into the replication system table. Use SCOPE_IDENTITY() for applications that require access to the inserted identity value.
 ```sql
-    GETUTCDATE()
+INSERT INTO Sales.Customer ([TerritoryID],[PersonID]) VALUES (8,NULL);  
+GO  
+SELECT SCOPE_IDENTITY() AS [SCOPE_IDENTITY];  
+GO  
+SELECT @@IDENTITY AS [@@IDENTITY];  
+GO
 ```
 
 ### Find a text within all procedure 
