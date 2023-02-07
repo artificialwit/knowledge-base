@@ -1,5 +1,21 @@
 # Interview
 
+## Here are some steps you can follow to start taking an interview:
+
+- Preparation: Before the interview, research the company, the position you're hiring for, and the requirements for the role. This will help you ask relevant and informed questions.
+
+- Introduction: Begin the interview by introducing yourself and the company, explaining the purpose of the interview, and providing an overview of the interview process.
+
+- Ask open-ended questions: Start the interview by asking open-ended questions to get the candidate talking. This will give you a sense of their communication skills, personality, and how they approach problem-solving.
+
+- Dig deeper: Once you've gotten a general understanding of the candidate's background, ask more specific and technical questions related to the role. This will help you assess their qualifications and skills.
+
+- Listen actively: Pay attention to the candidate's responses and be an active listener. Take notes and ask follow-up questions to clarify their answers.
+
+- Provide feedback: Give the candidate feedback on their responses, including both positive and constructive feedback.
+
+- Wrap up: At the end of the interview, thank the candidate for their time and let them know what the next steps are in the hiring process.
+
 ## PARSE() vs CAST() vs CONVERT() in SQL Server: What’s the Difference?
 Use PARSE only for converting from string to date/time and number types. For general type conversions, continue to use CAST or CONVERT. Keep in mind that there is a certain performance overhead in parsing the string value.
 
