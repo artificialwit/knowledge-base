@@ -213,5 +213,35 @@ Collation sensitivity can be used to specify how different characters are treate
 - Kana sensitivity differentiates between Japanese Hiragana and Katakana.
 - Width sensitivity treats characters of different widths (single-byte and double-byte) differently.
 
+## Can you explain the difference between a clustered and a non-clustered index in SQL Server?
+A: A clustered index determines the physical order of data in a table, whereas a non-clustered index provides a fast way to look up data without affecting the physical order of the table. A table can have only one clustered index, but multiple non-clustered indexes.
+
+## How do you monitor the performance of a SQL Server database?
+A: There are multiple ways to monitor the performance of a SQL Server database, including using performance counters, dynamic management views (DMVs), and extended events. You can also use third-party tools such as SQL Server Profiler, Database Engine Tuning Advisor, and SQL Server Performance Dashboard Reports.
+
+## Can you explain the difference between a primary key and a unique key in SQL Server?
+A: A primary key is a unique constraint that uniquely identifies each record in a table, and it cannot contain null values. A unique key is similar to a primary key, but it can contain null values. A table can have only one primary key, but multiple unique keys.
+
+## How do you implement transaction management in SQL Server?
+A: Transaction management in SQL Server can be implemented using the BEGIN TRANSACTION, COMMIT, and ROLLBACK statements, or by using the Transaction class in ADO.NET.
+
+## Can you explain the difference between a subquery and a join in SQL Server?
+A: A subquery is a query within another query that returns a single value or a table, whereas a join is a query that combines rows from two or more tables based on a related column between them. Subqueries can be used to simplify complex joins and to create complex conditions.
+
+## How do you handle exceptions in SQL Server?
+A: Exceptions in SQL Server can be handled using the TRY...CATCH block, which allows you to catch and handle exceptions raised by SQL Server.
+
+## Can you explain the difference between a stored procedure and a user-defined function in SQL Server?
+A: A stored procedure is a pre-compiled collection of Transact-SQL statements that can be executed multiple times, whereas a user-defined function is a subroutine that returns a single value or a table. Stored procedures can modify data and return multiple resultsets, whereas functions can only return a single value or a table.
+
+## How do you implement row-level security in SQL Server?
+A: Row-level security in SQL Server can be implemented using security predicates, which are predicates that restrict access to data based on a user's role or security context. Security predicates can be defined using security policies or by using dynamic data masking.
+
+## Can you explain the difference between a view and a table-valued function in SQL Server?
+A: A view is a virtual table that is based on the result of a SELECT statement, whereas a table-valued function is a user-defined function that returns a table. Views can simplify complex queries and provide a level of abstraction, whereas table-valued functions can be used to encapsulate complex logic or to return multiple result sets.
+
+## How do you implement data partitioning in SQL Server?
+A: Data partitioning in SQL Server can be implemented using partitioned views, which allow you to partition a large table into smaller, more manageable pieces, or by using table partitioning, which allows you to physically partition a table into multiple filegroups.
+
 
 
