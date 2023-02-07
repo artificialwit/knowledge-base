@@ -269,5 +269,14 @@ A: Data encryption in SQL Server can be implemented using the encryption feature
 ## Can you explain the difference between a clustered columnstore index and a non-clustered columnstore index in SQL Server?
 A: A clustered columnstore index is a type of index that stores data in a columnar format and allows for fast, highly-compressed data access, whereas a non-clustered columnstore index is similar, but it does not physically order the data in the table. A clustered columnstore index can only be created on a table that has no other clustered indexes, whereas a non-clustered columnstore index can be created on any table.
 
+## What is the difference between a unique constraint and a unique index in SQL Server?
+
+A: In SQL Server, a unique constraint and a unique index serve similar purposes, which is to enforce uniqueness of values in a specific column or set of columns. However, there are some differences between them.
+
+A unique constraint is a type of data integrity constraint that enforces the uniqueness of values in a specific column or set of columns. It can be defined at the time of table creation, or added to an existing table using an ALTER TABLE statement. When a unique constraint is violated, an error is raised and the transaction is rolled back.
+
+A unique index, on the other hand, is a type of index that enforces the uniqueness of values in a specific column or set of columns. It can be created on a table to support fast query performance and to enforce the uniqueness of values in a specific column or set of columns. A unique index is automatically created when a unique constraint is defined on a table.
+
+In conclusion, both a unique constraint and a unique index enforce uniqueness of values in a specific column or set of columns, but a unique constraint is a type of data integrity constraint, while a unique index is a type of index that can improve query
 
 
