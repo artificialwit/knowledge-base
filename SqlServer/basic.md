@@ -183,6 +183,12 @@ The SELECT DISTINCT clause will only return unique values from a table.
 - UPPER or UCASE takes in a given character string and converts it to upper case.
 
 ## What’s the standard syntax for group functions?
+  ```sql
+  SELECT column1, aggregate_function(column2)
+  FROM table_name
+  GROUP BY column1;
+  ```
+
 
 ## What is the difference between CHAR and VARCHAR datatypes in SQL?
 
@@ -191,7 +197,7 @@ The SELECT DISTINCT clause will only return unique values from a table.
 - CHAR has better performance than VARCHAR, but VARCHAR can be useful for anticipating data values without a set length.
 
 ## What are user-defined functions in SQL? What are the various types?
-There are two types of functions in SQL:
+A: There are two types of functions in SQL:
 
 - System Defined Functions (SDF) and
 - User-Defined Functions (UDF)
@@ -204,7 +210,7 @@ There are three types of UDFs:
 - Multi-Statement Table-Valued Functions also return a table of values, but can contain multiple statements, and its table structure is defined by the user.
 
 ## What is collation? What are the different collation sensitivity?
-Collation is a configuration setting that specifies how a database sorts and compares data. Different collation rules can be configured to determine the correct character sequence used to sort the character data.
+A: Collation is a configuration setting that specifies how a database sorts and compares data. Different collation rules can be configured to determine the correct character sequence used to sort the character data.
 
 Collation sensitivity can be used to specify how different characters are treated.
 
@@ -215,6 +221,10 @@ Collation sensitivity can be used to specify how different characters are treate
 
 ## Can you explain the difference between a clustered and a non-clustered index in SQL Server?
 A: A clustered index determines the physical order of data in a table, whereas a non-clustered index provides a fast way to look up data without affecting the physical order of the table. A table can have only one clustered index, but multiple non-clustered indexes.
+
+## Can you explain the difference between a clustered index and a non-clustered index with included columns in SQL Server?
+A: A clustered index determines the physical order of data in a table, whereas a non-clustered index with included columns is a non-clustered index that includes non-key columns in the leaf level of the index, allowing the index to cover more query requirements and reduce the need for additional lookups.
+
 
 ## How do you monitor the performance of a SQL Server database?
 A: There are multiple ways to monitor the performance of a SQL Server database, including using performance counters, dynamic management views (DMVs), and extended events. You can also use third-party tools such as SQL Server Profiler, Database Engine Tuning Advisor, and SQL Server Performance Dashboard Reports.
@@ -242,6 +252,22 @@ A: A view is a virtual table that is based on the result of a SELECT statement, 
 
 ## How do you implement data partitioning in SQL Server?
 A: Data partitioning in SQL Server can be implemented using partitioned views, which allow you to partition a large table into smaller, more manageable pieces, or by using table partitioning, which allows you to physically partition a table into multiple filegroups.
+
+## Can you explain the difference between a temporary table and a table variable in SQL Server?
+A: A temporary table is a real table that is stored in the tempdb database and is automatically dropped when the connection that created it is closed, whereas a table variable is a memory-resident object that is created and managed by SQL Server. Temporary tables can be used for complex operations and can be accessed by multiple sessions, whereas table variables have limited scope and cannot be accessed by multiple sessions.
+
+## Can you explain the difference between a left join and a right join in SQL Server?
+A: A left join returns all records from the left table (the first table specified in the join), and the matching records from the right table (the second table specified in the join). If there is no match, NULL values are returned for the right table. A right join is similar, but it returns all records from the right table and the matching records from the left table. If there is no match, NULL values are returned for the left table.
+
+## How do you implement full-text search in SQL Server?
+A: Full-text search in SQL Server can be implemented using the full-text search feature, which allows you to perform fast, flexible, and accurate searches against large amounts of unstructured text data. Full-text search can be configured and managed using the SQL Server Management Studio or using T-SQL commands.
+
+
+## How do you implement data encryption in SQL Server?
+A: Data encryption in SQL Server can be implemented using the encryption features, including transparent data encryption (TDE), cell-level encryption, and column-level encryption. TDE encrypts the entire database, whereas cell-level and column-level encryption allow you to encrypt specific cells or columns within a table.
+
+## Can you explain the difference between a clustered columnstore index and a non-clustered columnstore index in SQL Server?
+A: A clustered columnstore index is a type of index that stores data in a columnar format and allows for fast, highly-compressed data access, whereas a non-clustered columnstore index is similar, but it does not physically order the data in the table. A clustered columnstore index can only be created on a table that has no other clustered indexes, whereas a non-clustered columnstore index can be created on any table.
 
 
 
