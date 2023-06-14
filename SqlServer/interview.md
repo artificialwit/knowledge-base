@@ -2,6 +2,10 @@
 
 ## Here are some steps you can follow to start taking an interview:
 
+Good afternoon,
+
+My name is Pratul Dwivedi, and I am working as a technical consultant with PCS Infinity. We are a product-based company primarily focused on asset management. Currently, we are actively seeking a skilled SQL Server developer to join our team.
+
 - Preparation: Before the interview, research the company, the position you're hiring for, and the requirements for the role. This will help you ask relevant and informed questions.
 
 - Introduction: Begin the interview by introducing yourself and the company, explaining the purpose of the interview, and providing an overview of the interview process.
