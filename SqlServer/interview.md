@@ -187,7 +187,20 @@ END
   GO
 
 ```
+## PIVOT
 
+```sql
+
+SELECT productname, remarks
+FROM
+(SELECT keyname, keyname_value FROM controltest) AS Source
+PIVOT
+(
+    MAX(keyname_value)
+    FOR keyname IN (productname, remarks)
+) AS PivotTable;
+
+```
 ## What is the use of the SET NOCOUNT function?
 Ans: This function helps to stop the message that indicates how many rows are being affected while executing a T-SQL statement or stored procedure.
 
