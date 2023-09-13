@@ -236,3 +236,54 @@ Ans: These commands are used to return distinct rows by comparing the results of
 EXCEPT: operator allows returning distinct rows from the left input query only.
 
 INTERCEPT: operator allows returning distinct rows from both left and right input queries.
+
+## Dynamic Pivot
+```sql
+
+EXEC dbo.GetPivotData @TableName = N'controltest',   
+                 @KeyColumnName = N'keyname',  
+                 @ValueColumnName = N'keyname_value', 
+                 @ValueFunction = N'max'  
+
+ALTER PROC GetPivotData
+(
+    @TableName NVARCHAR(50),
+    @KeyColumnName NVARCHAR(50),
+    @ValueColumnName NVARCHAR(50),
+	@ValueFunction NVARCHAR(50) ='max'
+)
+AS
+BEGIN
+
+
+
+    DECLARE @Columns NVARCHAR(MAX),
+            @SQL NVARCHAR(MAX);
+
+    SET @SQL = N'SELECT @Columns =STRING_AGG( QUOTENAME(keyname), '','') FROM (SELECT DISTINCT keyname AS keyname  FROM ' + @TableName + ') as Source';
+
+	PRINT @SQL;
+    -- Execute the dynamic SQL statement
+    EXECUTE sp_executesql @SQL,
+                          N'@Columns NVARCHAR(MAX) OUTPUT',
+                          @Columns OUTPUT;
+
+
+
+    -- Build the dynamic SQL statement
+    SET @SQL = N'SELECT ' + @Columns + N'
+    FROM (
+        SELECT ' + @KeyColumnName + N', ' + @ValueColumnName + N'
+        FROM ' + @TableName + N'
+    ) AS Source
+    PIVOT (
+        ' + @ValueFunction+'('  + @ValueColumnName + N')
+        FOR '  + @KeyColumnName + N' IN (' + @Columns + N')
+    ) AS PivotTable';
+
+	PRINT @SQL;
+    -- Execute the dynamic SQL statement
+    EXEC (@SQL);
+
+END;
+```
