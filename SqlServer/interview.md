@@ -140,9 +140,7 @@ BEGIN
     -- Validation: Check if the MRP is greater than zero
     IF @mrp <= 0
     BEGIN
-        DECLARE @ErrorMessage NVARCHAR(200) = 'MRP must be greater than zero.';
-        RAISERROR(@ErrorMessage, 16, 1);
-        RETURN; -- Stop further execution
+        RAISERROR('MRP must be greater than zero.', 16, 1);
     END
 END
 
