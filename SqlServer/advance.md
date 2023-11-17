@@ -290,3 +290,9 @@ SET @jsonInfo=N'{"info":{"address":[{"town":"Paris"},{"town":"London"}]}}';
 
 SELECT JSON_PATH_EXISTS(@jsonInfo,'$.info.address'); -- 1
 ```
+### Performace
+```sql
+SET STATISTICS IO { ON | OFF }
+
+https://statisticsparser.com/
+```
