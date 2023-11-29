@@ -1,5 +1,24 @@
 # Advance
 
+### Generate duplicate records
+
+```sql
+
+-- Create a CTE with numbers from 1 to 50
+WITH NumberSequence AS (
+    SELECT 1 AS Number
+    UNION ALL
+    SELECT Number + 1
+    FROM NumberSequence
+    WHERE Number < 50
+)
+-- Perform a cross join with DummyUser
+SELECT *
+FROM CFG.Users
+CROSS JOIN NumberSequence;
+
+
+```
 ### ROW_NUMBER()
 ```sql
 
