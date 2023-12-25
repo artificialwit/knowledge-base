@@ -150,39 +150,32 @@ END
 ```sql
 
 
-  SET QUOTED_IDENTIFIER ON
-  GO
-  CREATE TABLE [dbo].[control](
-    [controlid] [int] NOT NULL,
-    [keyname] [nvarchar](50) NULL,
-    [keyname_value] [nvarchar](50) NULL,
-   CONSTRAINT [PK_control] PRIMARY KEY CLUSTERED 
-  (
-    [controlid] ASC
-  )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
-  ) ON [PRIMARY]
-  GO
-  /****** Object:  Table [dbo].[product]    Script Date: 4/6/2022 6:39:07 AM ******/
-  SET ANSI_NULLS ON
-  GO
-  SET QUOTED_IDENTIFIER ON
-  GO
-  CREATE TABLE [dbo].[product](
-    [productid] [int] IDENTITY(1,1) NOT NULL,
-    [productname] [nvarchar](50) NOT NULL,
-    [remarks] [nvarchar](50) NULL,
-   CONSTRAINT [PK_product] PRIMARY KEY CLUSTERED 
-  (
-    [productid] ASC
-  )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
-  ) ON [PRIMARY]
-  GO
+  CREATE TABLE [dbo].[Control]
+(
+    [controlId] [INT] IDENTITY(1, 1) NOT NULL,
+    [keyname] [NVARCHAR](50) NULL,
+    [keyname_value] [NVARCHAR](50) NULL
+);
 
-  GO
-  INSERT [dbo].[control] ([controlid], [keyname],  [keyname_value]) VALUES (1, N'productname',  N'I Phone value')
-  INSERT [dbo].[control] ([controlid], [keyname], [keyname_value]) VALUES (2, N'remarks',  N'From Apple company value')
+GO
+CREATE TABLE [dbo].[product]
+(
+    [productid] [INT] IDENTITY(1, 1) NOT NULL,
+    [productname] [NVARCHAR](50) NOT NULL,
+    [remarks] [NVARCHAR](50) NULL
+);
 
-  GO
+GO
+INSERT [dbo].[Control]
+(
+    [keyname],
+    [keyname_value]
+)
+VALUES
+(N'productname', N'I Phone 12'),
+(N'remarks', N'An Apple company product.');
+
+
 
 ```
 ## PIVOT
