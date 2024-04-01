@@ -3,7 +3,8 @@ How do you define productivity for coding
 global shortage of qualified developers
 
 #### AI application layer
-### AI sited
+
+### AI sites
 https://www.sellscale.com/
 https://www.popai.pro/
 https://www.regie.ai/
