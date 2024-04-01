@@ -1,3 +1,4 @@
+# GPT (Generative Pre-Trained Model) 
 The hottest new programming language is English
 How do you define productivity for coding
 global shortage of qualified developers
@@ -5,17 +6,17 @@ global shortage of qualified developers
 #### AI application layer
 
 ### AI sites
-https://www.sellscale.com/
-https://www.popai.pro/
-https://www.regie.ai/
-https://www.jasper.ai/
-https://rytr.me/
-https://retool.com/
-https://www.seek.ai/
-https://www.sisense.com/
-https://stability.ai/
-https://character.ai/
-GPT (Generative Pre-Trained Model) 
+  - https://www.sellscale.com/
+  - https://www.popai.pro/
+  - https://www.regie.ai/
+  - https://www.jasper.ai/
+  - https://rytr.me/
+  - https://retool.com/
+  - https://www.seek.ai/
+  - https://www.sisense.com/
+  - https://stability.ai/
+  - https://character.ai/
+
 https://platform.openai.com/playground
 Chief Data Officer- CDO - As for the responsibilities for a CDO, they are wide ranging. This person will help with governance, managing datasets, improving their quality, and finding better ways for leveraging these assets. 
 Often, this means being a critical part of AI projects
