@@ -19,6 +19,27 @@ CROSS JOIN NumberSequence;
 
 
 ```
+### Paging
+
+```sql
+DECLARE @OffsetRows INT;
+
+SET @OffsetRows = 10; -- Number of rows already fetched
+
+SELECT *,
+       TotalRowCount
+FROM (
+    SELECT *,
+           COUNT(*) OVER() AS TotalRowCount,
+           ROW_NUMBER() OVER (ORDER BY YourColumn) AS RowNum
+    FROM YourTable
+) AS SubQuery
+WHERE RowNum > @OffsetRows
+ORDER BY YourColumn
+OFFSET @OffsetRows ROWS
+FETCH NEXT 10 ROWS ONLY;
+
+```
 ### ROW_NUMBER()
 ```sql
 
