@@ -22,22 +22,37 @@ CROSS JOIN NumberSequence;
 ### Paging
 
 ```sql
-DECLARE @OffsetRows INT;
 
-SET @OffsetRows = 10; -- Number of rows already fetched
+ALTER PROCEDURE usp_GetAssets
+(
+    @pageIndex INT,
+    @pageSize INT
+)
+AS
+/*
+EXEC dbo.usp_GetAssets @pageIndex = 1,                    -- int
+                             @pageSize = 30                     -- int
+                             
 
-SELECT *,
-       TotalRowCount
-FROM (
+*/
+BEGIN
+    DECLARE @OffsetRows INT;
+    SET @OffsetRows = (@pageIndex - 1) * @pageSize;
+
+
     SELECT *,
-           COUNT(*) OVER() AS TotalRowCount,
-           ROW_NUMBER() OVER (ORDER BY YourColumn) AS RowNum
-    FROM YourTable
-) AS SubQuery
-WHERE RowNum > @OffsetRows
-ORDER BY YourColumn
-OFFSET @OffsetRows ROWS
-FETCH NEXT 10 ROWS ONLY;
+           totalRecord
+    FROM
+    (
+        SELECT COUNT(*) OVER () AS totalRecord,
+               *,
+               ROW_NUMBER() OVER (ORDER BY AssetId) AS RowNum
+        FROM usp_AssetViewTrackerDiscard
+    ) AS SubQuery
+    WHERE RowNum > @OffsetRows
+    ORDER BY AssetId OFFSET @OffsetRows ROWS FETCH NEXT @pageSize ROWS ONLY;
+
+END;
 
 ```
 ### ROW_NUMBER()
