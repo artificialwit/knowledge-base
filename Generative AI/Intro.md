@@ -4,7 +4,7 @@ How do you define productivity for coding
 global shortage of qualified developers
 
 #### AI application layer
-
+  - https://huggingface.co/models
 ### AI sites
   - https://www.sellscale.com/
   - https://www.popai.pro/
@@ -16,8 +16,8 @@ global shortage of qualified developers
   - https://www.sisense.com/
   - https://stability.ai/
   - https://character.ai/
-
-https://platform.openai.com/playground
+  - https://platform.openai.com/playground
+    
 Chief Data Officer- CDO - As for the responsibilities for a CDO, they are wide ranging. This person will help with governance, managing datasets, improving their quality, and finding better ways for leveraging these assets. 
 Often, this means being a critical part of AI projects
 
