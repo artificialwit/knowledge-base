@@ -3,6 +3,12 @@ The hottest new programming language is English
 How do you define productivity for coding
 global shortage of qualified developers
 
+## New Feature
+  - Form generation based on submit api and preload api
+  - Row count machanism changes for performance
+  - Switch Cateory for user from procedure to table valued function
+  - Switch Location for user from procedure to table valued function
+  - Prompt based data reporting using ChatGPT API or something else like seek.ai
 #### AI application layer
   - https://huggingface.co/models
 ### AI sites
@@ -16,6 +22,8 @@ global shortage of qualified developers
   - https://www.sisense.com/
   - https://stability.ai/
   - https://character.ai/
+  - https://www.spoke.ai/
+  - https://www.popai.pro/
   - https://platform.openai.com/playground
     
 Chief Data Officer- CDO - As for the responsibilities for a CDO, they are wide ranging. This person will help with governance, managing datasets, improving their quality, and finding better ways for leveraging these assets. 
