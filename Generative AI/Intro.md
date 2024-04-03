@@ -16,6 +16,7 @@
   - the leader of the team should not necessarily be an AI expert. Rather, you want someone who has proven leadership skills and who has been able to get projects done.
   - leader can identify the business use cases where generative AI can make a difference
   - Data engineer: will work with the various data sources and also do some coding, say with BI, SQL or Python. work closely with data scientists to build the models.
+  - buy vs. build decision
   - 
 #### AI application layer
   - https://huggingface.co/models
