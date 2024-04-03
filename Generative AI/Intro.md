@@ -1,8 +1,8 @@
 # GPT (Generative Pre-Trained Model) 
-The hottest new programming language is English
-How do you define productivity for coding
-global shortage of qualified developers
-
+  - The hottest new programming language is English
+  - How do you define productivity for coding
+  - global shortage of qualified developers
+  - Gartner. About 85% of AI and machine learning projects do not meet their goals
 ## New Feature
   - Form generation based on submit api and preload api
   - Row count machanism changes for performance
@@ -26,8 +26,10 @@ global shortage of qualified developers
   - https://www.popai.pro/
   - https://platform.openai.com/playground
     
-Chief Data Officer- CDO - As for the responsibilities for a CDO, they are wide ranging. This person will help with governance, managing datasets, improving their quality, and finding better ways for leveraging these assets. 
+### Chief Data Officer- CDO - 
+As for the responsibilities for a CDO, they are wide ranging. This person will help with governance, managing datasets, improving their quality, and finding better ways for leveraging these assets. 
 Often, this means being a critical part of AI projects
 
-Smart Ticketing.” This is for when an IT professional gets a ticket, they can click a few buttons to get a summary, recommended solution, and a script to resolve the issue. “Once this is completed, the entire loop can be turned into a workflow that will run automatically whenever similar tickets are submitted, freeing up IT professionals from hours — or sometimes even days — of menial work to focus on projects in the backlog,” said Pekelman. 
+### Smart Ticketing.
+” This is for when an IT professional gets a ticket, they can click a few buttons to get a summary, recommended solution, and a script to resolve the issue. “Once this is completed, the entire loop can be turned into a workflow that will run automatically whenever similar tickets are submitted, freeing up IT professionals from hours — or sometimes even days — of menial work to focus on projects in the backlog,” said Pekelman. 
 “Not only that, but it can also automatically generate a response to the end user that requested support. Hello, automated small talk.”
