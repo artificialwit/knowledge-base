@@ -9,6 +9,13 @@
   - Switch Cateory for user from procedure to table valued function
   - Switch Location for user from procedure to table valued function
   - Prompt based data reporting using ChatGPT API or something else like seek.ai
+  - Device specific screen and control
+  - Trainee must be like data scintist and sponser certicate cost with bond
+  - brainstorming sessions. It should be free-flowing and not involve much criticism. The goal is to unleash creativity.
+  - Amazon founder Jeff Bezos believes in the power of small teams. This is about the two-pizza rule
+  - the leader of the team should not necessarily be an AI expert. Rather, you want someone who has proven leadership skills and who has been able to get projects done.
+  - leader can identify the business use cases where generative AI can make a difference
+  - Data engineer: will work with the various data sources and also do some coding, say with BI, SQL or Python.
 #### AI application layer
   - https://huggingface.co/models
 ### AI sites
