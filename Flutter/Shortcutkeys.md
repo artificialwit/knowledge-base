@@ -1,3 +1,8 @@
+# Command
+- flutter doctor
+- flutter pub outdated
+- flutter pub upgrade --major-versions
+- 
 # Launch JSON file
 ```json
 {
