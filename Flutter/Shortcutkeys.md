@@ -1,3 +1,9 @@
+# Kotlin update and installtion
+Open terminal run below command one by one
+curl -s "https://get.sdkman.io" | bash
+sdk install kotlin
+kotlin -version
+
 # Command
 - flutter doctor
 - flutter pub outdated
