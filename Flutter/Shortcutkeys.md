@@ -1,7 +1,7 @@
 # Kotlin update and installtion
-
-```cmd
 Open terminal run below command one by one
+```cmd
+
 curl -s "https://get.sdkman.io" | bash
 sdk install kotlin
 kotlin -version
