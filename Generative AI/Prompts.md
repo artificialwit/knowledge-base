@@ -35,17 +35,17 @@
 - Implement a deep reinforcement learning algorithm
 - Implement a recommendation system
 - Implement a recommendation algorithm
-37. Implement a recommendation engine
-38. Implement a recommendation system based on collaborative filtering
-39. Implement a recommendation system based on content-based filtering
-40. Implement a recommendation system based on hybrid filtering
-41. Implement a recommendation system based on deep learning
-42. Implement a recommendation system based on matrix factorization
-43. Implement a recommendation system based on deep matrix factorization
-44. Implement a recommendation system based on neural networks
-45. Implement a recommendation system based on deep neural networks
-46. Implement a recommendation system based on graph neural networks
-47. Implement a recommendation system based on attention mechanisms
-48. Implement a recommendation system based on transfer learning
-49. Implement a recommendation system based on reinforcement learning
-50. Implement a recommendation system based on unsupervised learning
+- Implement a recommendation engine
+- Implement a recommendation system based on collaborative filtering
+- Implement a recommendation system based on content-based filtering
+- Implement a recommendation system based on hybrid filtering
+- Implement a recommendation system based on deep learning
+- Implement a recommendation system based on matrix factorization
+- Implement a recommendation system based on deep matrix factorization
+- Implement a recommendation system based on neural networks
+- Implement a recommendation system based on deep neural networks
+- Implement a recommendation system based on graph neural networks
+- Implement a recommendation system based on attention mechanisms
+- Implement a recommendation system based on transfer learning
+- Implement a recommendation system based on reinforcement learning
+- Implement a recommendation system based on unsupervised learning
