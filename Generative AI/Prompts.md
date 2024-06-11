@@ -6,35 +6,35 @@
 - Convert a video file to another format
 - Enhance the quality of an image
 - Generate a mosaic image
-8. Stitch multiple images to form a panorama
-9. Implement basic computer vision algorithms (e.g. object detection)
-10. Implement image segmentation
-11. Recognize faces in an image
-12. Track objects in a video stream
-13. Fit a curve to a set of data points
-14. Implement augmented reality
-15. Create a virtual tour
-16. Implement a physics simulation
-17. Render a 3D scene
-18. Implement basic computer graphics algorithms
-19. Generate a fractal image
-20. Simulate fluid dynamics
-21. Implement a basic robot control system
-22. Implement basic robotics algorithms (e.g. path planning)
-23. Implement a autonomous car simulation
-24. Implement basic control systems (e.g. PID control)
-25. Implement a feedback control system
-26. Implement a model predictive control system
-27. Implement a state-space model
-28. Implement a Kalman filter
-29. Implement a Particle filter
-30. Implement a Monte Carlo simulation
-31. Implement a Genetic Algorithm
-32. Implement a swarm optimization algorithm
-33. Implement a reinforcement learning algorithm
-34. Implement a deep reinforcement learning algorithm
-35. Implement a recommendation system
-36. Implement a recommendation algorithm
+- Stitch multiple images to form a panorama
+- Implement basic computer vision algorithms (e.g. object detection)
+- Implement image segmentation
+- Recognize faces in an image
+- rack objects in a video stream
+- Fit a curve to a set of data points
+- Implement augmented reality
+- reate a virtual tour
+- Implement a physics simulation
+- Render a 3D scene
+- Implement basic computer graphics algorithms
+- Generate a fractal image
+- Simulate fluid dynamics
+- Implement a basic robot control system
+- Implement basic robotics algorithms (e.g. path planning)
+- Implement a autonomous car simulation
+- Implement basic control systems (e.g. PID control)
+- Implement a feedback control system
+- Implement a model predictive control system
+- Implement a state-space model
+- Implement a Kalman filter
+- Implement a Particle filter
+- Implement a Monte Carlo simulation
+- Implement a Genetic Algorithm
+- Implement a swarm optimization algorithm
+- Implement a reinforcement learning algorithm
+- Implement a deep reinforcement learning algorithm
+- Implement a recommendation system
+- Implement a recommendation algorithm
 37. Implement a recommendation engine
 38. Implement a recommendation system based on collaborative filtering
 39. Implement a recommendation system based on content-based filtering
