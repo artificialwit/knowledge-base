@@ -1,11 +1,11 @@
 ## 50 Tasks that ChatGPT Can Do in Seconds with these simple Prompts
-Play a simple game (e.g. Tic Tac Toe)
-2. Implement an encryption/decryption algorithm
-3. Compress/decompress a file
-4. Extract information from a PDF document
-5. Convert a video file to another format
-6. Enhance the quality of an image
-7. Generate a mosaic image
+- Play a simple game (e.g. Tic Tac Toe)
+- Implement an encryption/decryption algorithm
+- Compress/decompress a file
+- Extract information from a PDF document
+- Convert a video file to another format
+- Enhance the quality of an image
+- Generate a mosaic image
 8. Stitch multiple images to form a panorama
 9. Implement basic computer vision algorithms (e.g. object detection)
 10. Implement image segmentation
