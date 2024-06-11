@@ -49,3 +49,25 @@
 - Implement a recommendation system based on transfer learning
 - Implement a recommendation system based on reinforcement learning
 - Implement a recommendation system based on unsupervised learning
+### Writing/Editing Prompts
+- Write a 500 word blog post about the benefits of meditation for busy professionals
+- Proofread and correct any grammar/spelling errors in this article draft
+- Summarize this research paper into a few bullet points
+### Research/Analysis Prompts
+- Provide an overview of the latest trends in the cryptocurrency market
+- Give a SWOT analysis for Apple’s new product line
+- Explain the theory of relativity in simple terms
+### Creative Writing Prompts
+- Write a short children’s story about a talking tree and its forest friends
+- Come up with a romantic poem about sunsets for an anniversary card
+- Create a funny script for a commercial selling sponges
+### Coding Prompts
+- Write a Python function to check if a number is prime
+- Explain what this Java code does and how it could be optimized
+- Give an example use case for implementing a blockchain in JavaScript
+
+### Business/Marketing
+- Draft a cold email pitch for our SEO services to potential clients
+- Create a social media content calendar for our clothing brand for next month
+- Outline a video marketing campaign for our new fitness app”
+
