@@ -10,7 +10,7 @@
 - Implement basic computer vision algorithms (e.g. object detection)
 - Implement image segmentation
 - Recognize faces in an image
-- rack objects in a video stream
+- Track objects in a video stream
 - Fit a curve to a set of data points
 - Implement augmented reality
 - reate a virtual tour
