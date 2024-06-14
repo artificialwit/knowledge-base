@@ -127,6 +127,97 @@ FROM orders;
 ## Write SQL Query to display the current time.
 ## Write an SQL Query to find the year from date.
 ## What is CTE?
+```sql
+WITH year_metrics AS (
+  SELECT
+    YEAR(day) AS year,
+    SUM(daily_amount) AS year_amount
+  FROM sales
+  GROUP BY YEAR(day)
+)
+INSERT INTO yearly_sales (year, year_amount)
+SELECT year, year_amount
+FROM year_metrics;
+```
+```sql
+WITH category_discounts AS (
+  SELECT
+    category_id,
+    AVG(discount) AS avg_discount
+  FROM products
+  GROUP BY category_id
+)
+UPDATE products
+SET discount = cd.avg_discount
+FROM products p
+JOIN category_discounts cd
+ON p.category_id = cd.category_id;
+
+```
+```sql
+WITH old_logs AS (
+  SELECT *
+  FROM logs
+  WHERE log_date < DATEADD(YEAR, -1, GETDATE())
+)
+DELETE FROM logs
+WHERE log_id IN (SELECT log_id FROM old_logs);
+
+```
+```sql
+CREATE VIEW yearly_sales_summary AS
+WITH year_metrics AS (
+  SELECT
+    YEAR(day) AS year,
+    SUM(daily_amount) AS total_sales,
+    SUM(quantity_sold) AS total_products_sold
+  FROM sales
+  GROUP BY YEAR(day)
+),
+average_price AS (
+  SELECT
+    YEAR(s.day) AS year,
+    AVG(p.price) AS avg_price
+  FROM sales s
+  JOIN products p ON s.product_id = p.product_id
+  GROUP BY YEAR(s.day)
+),
+category_sales AS (
+  SELECT
+    YEAR(s.day) AS year,
+    c.category_id,
+    c.category_name,
+    SUM(s.daily_amount) AS category_sales
+  FROM sales s
+  JOIN products p ON s.product_id = p.product_id
+  JOIN categories c ON p.category_id = c.category_id
+  GROUP BY YEAR(s.day), c.category_id, c.category_name
+),
+top_category_sales AS (
+  SELECT
+    year,
+    category_id,
+    category_name,
+    category_sales,
+    ROW_NUMBER() OVER (PARTITION BY year ORDER BY category_sales DESC) AS rank
+  FROM category_sales
+)
+SELECT
+  ym.year,
+  ym.total_sales,
+  ym.total_products_sold,
+  ap.avg_price,
+  tcs.category_name AS top_category,
+  tcs.category_sales AS top_category_sales
+FROM year_metrics ym
+JOIN average_price ap ON ym.year = ap.year
+JOIN top_category_sales tcs ON ym.year = tcs.year
+WHERE tcs.rank = 1
+ORDER BY ym.year;
+
+```
+
+
 ## What is normalization?
 ## A Table Is Classified As A Parent Table And You Want To Drop And Re-create It.
 How Would You Do This Without Affecting The Children Tables?
