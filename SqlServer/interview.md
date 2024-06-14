@@ -25,7 +25,13 @@ Use PARSE only for converting from string to date/time and number types. For gen
 
 https://database.guide/parse-vs-cast-vs-convert-in-sql-server-whats-the-difference/
 
-
+## Window Functions
+Window functions allow you to perform calculations across a set of rows that are related to the current row. They are useful for tasks such as calculating running totals and ranking results. Here's an example of using the ROW_NUMBER function to rank customers by their total order amount:
+```sql
+SELECT customer_name, order_amount, 
+       ROW_NUMBER() OVER (ORDER BY order_amount DESC) AS rank
+FROM orders;
+```
 ## What is difference between count and count (*)
   1. Count function require column to count data but count (*) will count all rows
   2. Count function do not count NULL values in column but count (*) will count all rows whether
