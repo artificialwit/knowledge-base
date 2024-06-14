@@ -4,6 +4,201 @@
 SELECT date, sales, SUM(sales) OVER (ORDER BY date) AS running_total
 FROM
 sales_data;
+```
+### Ranking Rows Based on a Specific Ordering Criteria
+```sql
+WITH employee_ranking AS (
+  SELECT
+    employee_id,
+    last_name,
+    first_name,
+    salary,
+    RANK() OVER (ORDER BY salary DESC) as ranking
+  FROM employee
+)
+SELECT
+  employee_id,
+  last_name,
+  first_name,
+  salary
+FROM employee_ranking
+WHERE ranking <= 5
+ORDER BY ranking
+```
+### List the Second Highest Salary By Department
+```sql
+WITH employee_ranking AS (
+  SELECT
+    employee_id,
+    last_name,
+    first_name,
+    salary,
+    dept_id
+    RANK() OVER (PARTITION BY dept_id ORDER BY salary DESC) as ranking
+  FROM employee
+)
+SELECT
+  dept_id,
+  employee_id,
+  last_name,
+  first_name,
+  salary
+FROM employee_ranking
+WHERE ranking = 2
+ORDER BY dept_id, last_name
+
+```
+
+### List the First 50% Rows in a Result Set
+```sql
+WITH employee_ranking AS (
+  SELECT
+    employee_id,
+    last_name,
+    first_name,
+    salary,
+    NTILE(2) OVER (ORDER BY salary ) as ntile
+  FROM employee
+)
+SELECT
+  employee_id,
+  last_name,
+  first_name,
+  salary
+FROM employee_ranking
+WHERE ntile = 1
+ORDER BY salary
+```
+
+### Number the Rows in a Result Set
+```sql
+SELECT
+  employee_id,
+  last_name,
+  first_name,
+  salary,
+  ROW_NUMBER() OVER (ORDER BY employee_id) as ranking_position
+FROM employee
+```
+
+### Employees with Salaries Higher Than Their Departmental Average
+```sql
+SELECT
+  first_name,
+  last_name,
+  salary
+FROM employee e1
+WHERE salary >
+    (SELECT AVG(salary)
+     FROM employee e2
+     WHERE e1.departmet_id = e2.department_id)
+```
+
+### Find Common Records Between Tables
+```sql
+SELECT
+  last_name,
+  first_name
+FROM employee
+INTERSECT
+SELECT
+  last_name,
+  first_name
+FROM employee_2020_jan
+```
+
+### Grouping Data with ROLLUP
+```sql
+SELECT
+  dept_id,
+  expertise,
+  SUM(salary) total_salary
+FROM employee
+GROUP BY ROLLUP (dept_id, expertise)
+```
+
+### Compute a Moving Average in SQL
+```sql
+SELECT
+  day,
+  daily_amount,
+  AVG (daily_amount) OVER (ORDER BY day ROWS 6 PRECEDING)
+    AS moving_average
+FROM sales
+```
+
+### Compute a Difference (Delta) Between Two Columns on Different Rows
+Let’s suppose we want to obtain a report with the total amount sold on each day, but we also want to obtain the difference (or delta) related to the previous day.
+```sql
+SELECT
+  day,
+  daily_amount,
+  daily_amount - LAG(daily_amount) OVER (ORDER BY day)
+    AS delta_yesterday_today
+FROM sales
+
+```
+
+### Compute a Year-Over-Year Difference
+```sql
+WITH year_metrics AS (
+  SELECT
+    extract(year from day) as year,
+    SUM(daily_amount) as year_amount
+  FROM sales
+  GROUP BY year)
+SELECT
+  year,
+  year_amount,
+  LAG(year_amount) OVER (ORDER BY year) AS revenue_previous_year,
+  year_amount - LAG(year_amount) OVER (ORDER BY year) as yoy_diff_value,
+  ((year_amount - LAG(year_amount) OVER (ORDER BY year) ) /
+     LAG(year_amount) OVER (ORDER BY year)) as yoy_diff_perc
+FROM year_metrics
+ORDER BY 1
+
+```
+### Compute a Year-Over-Year Difference
+```sql
+WITH year_metrics
+AS (SELECT YEAR(CreatedDate) AS year,
+           SUM(Amount) AS year_amount
+    FROM dbo.PurchaseOrder
+    GROUP BY YEAR(CreatedDate))
+SELECT year,
+       year_amount,
+       LAG(year_amount) OVER (ORDER BY year) AS revenue_previous_year,
+       year_amount - LAG(year_amount) OVER (ORDER BY year) AS yoy_diff_value,
+       CASE
+           WHEN LAG(year_amount) OVER (ORDER BY year) = 0 THEN
+               NULL
+           ELSE
+       ((year_amount - LAG(year_amount) OVER (ORDER BY year)) * 1.0 / LAG(year_amount) OVER (ORDER BY year))
+       END AS yoy_diff_perc
+FROM year_metrics
+ORDER BY year;
+
+```
+
+### Use Recursive Queries to Manage Data Hierarchies
+list of all category under (directly or indirectly) to the main category 
+```sql
+WITH subordinate
+AS (SELECT CategoryId,
+           CategoryName,
+           ParentCategoryId
+    FROM Mst.Category
+    WHERE CategoryId = 141 -- id of the top hierarchy category (Furniture & Fixtures)
+
+    UNION ALL
+    SELECT e.CategoryId,
+           e.CategoryName,
+           e.ParentCategoryId
+    FROM Mst.Category e
+        JOIN subordinate s
+            ON e.ParentCategoryId = s.CategoryId)
+SELECT *
+FROM subordinate;
 
 ```
 ### Generate duplicate records
