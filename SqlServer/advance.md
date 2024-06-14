@@ -1,5 +1,11 @@
 # Advance
+### Running total
+```sql
+SELECT date, sales, SUM(sales) OVER (ORDER BY date) AS running_total
+FROM
+sales_data;
 
+```
 ### Generate duplicate records
 
 ```sql
