@@ -37,6 +37,7 @@
   - MusicLM
   - https://wave-ai.net/
   - https://www.duolingo.com/
+  - https://flatlogic.com/
     
 ### Chief Data Officer- CDO - 
 As for the responsibilities for a CDO, they are wide ranging. This person will help with governance, managing datasets, improving their quality, and finding better ways for leveraging these assets. 
