@@ -1,4 +1,5 @@
 ## 50 Tasks that ChatGPT Can Do in Seconds with these simple Prompts
+- I need an emoji to show money
 - Play a simple game (e.g. Tic Tac Toe)
 - Implement an encryption/decryption algorithm
 - Compress/decompress a file
