@@ -50,6 +50,58 @@
 - Implement a recommendation system based on transfer learning
 - Implement a recommendation system based on reinforcement learning
 - Implement a recommendation system based on unsupervised learning
+### 50 Prompts
+
+1. Display the current time
+2. Print a given message
+3. Count the number of characters in a string
+4. Convert text to uppercase/lowercase
+5. Repeat a message a certain number of times
+6. Reverse a string
+7. Check if a number is odd or even
+8. Generate a random number
+9. Check if a number is prime
+10. Find the greatest common divisor of two numbers
+11. Sort a list of numbers in ascending or descending order
+12. Find the sum of numbers in a list a
+13. Check if a string is a palindrome a
+14. Find the length of a list
+15. Search for a given item in a list
+16. Remove duplicates from a list
+17. Merge two lists
+18. Shuffle a list a of items
+19. Find the minimum or maximum item in a list
+20. Check if a given year is a leap year
+21. Calculate the factorial of a number
+22. Get the nth Fibonacci number
+23. Check if a number is positive, negative or zero
+24. Multiply two matrices
+25. Calculate the determinant of a matrix
+26. Transpose a matrix
+27. Solve a system of linear equations
+28. Find the inverse of a matrix
+29. Factorize a quadratic equation
+30. Plot a mathematical function
+31. Solve an ordinary differential equation
+32. Calculate the derivative of a function
+33. Calculate the integral of a function
+34. Find the roots of a polynomial
+35. Fit a curve to a set of data points
+36. Implement a basic machine learning algorithm
+37. Train a neural network
+38. Recognize handwritten digits
+39. Classify images into different categories
+40. Generate text using a language model
+41. Summarize a long article
+42. Translate text to another language
+43. Perform sentiment analysis on a piece of text
+44. Extract named entities from a text
+45. Predict stock prices
+46. Forecast weather for a given location
+47. Recommend products based on user preferences
+48. Implement a search engine
+49. Crawl and index web pages
+50. Create a chatbot
 ### Writing/Editing Prompts
 - Write a 500 word blog post about the benefits of meditation for busy professionals
 - Proofread and correct any grammar/spelling errors in this article draft
