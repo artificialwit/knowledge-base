@@ -1,3 +1,7 @@
+## One Prompt Will Teach You How to Use ChatGPT
+
+Create a curated list of use cases for ChatGPT, each thoughtfully designed to align with my occupation. This list will serve as my personalized guide, enabling me to leverage ChatGPT’s capabilities in various aspects of my occupation. Organize this list into 10 distinct sections sorted by their relevance to my occupation. In each section, construct a table with columns for "Use Case," "Description," and "Example Interaction."
+
 ## 50 Tasks that ChatGPT Can Do in Seconds with these simple Prompts
 - I need an emoji to show money
 - Play a simple game (e.g. Tic Tac Toe)
