@@ -1,4 +1,5 @@
 # GPT (Generative Pre-Trained Model) 
+  - Roadmap to Become an AI Engineer Roadmap , https://dswharshit.medium.com/roadmap-to-become-an-ai-engineer-roadmap-6d9558d970cf
   - The hottest new programming language is English
   - How do you define productivity for coding
   - global shortage of qualified developers
