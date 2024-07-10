@@ -490,7 +490,13 @@ WHERE s.is_user_process = 1;
 
 
 ```
-
+### JAON_VALUE
+```sql
+SELECT 
+    JSON_VALUE(data.value, '$.transactionNo') AS transactionNo
+FROM 
+    OPENJSON(@json, '$.data') AS data;
+```
 ### JSON_VALUE
 
 ```json
