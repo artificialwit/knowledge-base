@@ -1,6 +1,6 @@
 # Prompt Engineering
   - https://platform.openai.com/docs/guides/prompt-engineering
-  - 
+  - https://towardsdatascience.com/building-llm-apps-a-clear-step-by-step-guide-1fe1e6ef60fd
 # GPT (Generative Pre-Trained Model) 
   - Roadmap to Become an AI Engineer Roadmap , https://dswharshit.medium.com/roadmap-to-become-an-ai-engineer-roadmap-6d9558d970cf
   - The hottest new programming language is English
