@@ -5,6 +5,21 @@ SELECT date, sales, SUM(sales) OVER (ORDER BY date) AS running_total
 FROM
 sales_data;
 ```
+
+### Concat Large String like HTML
+```sql
+DECLARE @ConcatenatedResult NVARCHAR(MAX);
+
+SELECT @ConcatenatedResult = 
+    STUFF((SELECT ',' + column_name
+           FROM table_name
+           FOR XML PATH(''), TYPE
+          ).value('.', 'NVARCHAR(MAX)'), 1, 1, '');
+
+-- Use @ConcatenatedResult as needed
+
+```
+
 ### Ranking Rows Based on a Specific Ordering Criteria
 ```sql
 WITH employee_ranking AS (
