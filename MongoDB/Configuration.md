@@ -5,27 +5,36 @@
 3. add system environment variable as mongosh to C:\Program Files\MongoDB\mongosh\bin\ location.
 4. restart your machine or go to C:\Program Files\MongoDB\mongosh\bin in command prompt.
 5. run command steps by steps.
-   ```sh
-    show dbs
-   ```sn
+```sh
+ show dbs
+```
 6. switch to navtrack db using below command
-> use navtrack
+```sh
+ use navtrack
+```
 7. show list of collections
-> show collections
-8. to find any device collection data
-> db.deviceConnections.find()
+```sh
+show collections
+```
+9. to find any device collection data
+```sh
+db.deviceConnections.find()
+```
 9. switch to admin database
-> use admin
-> db.getUsers()
+```sh
+use admin
+db.getUsers()
+```
 10. create user in admin db for navtarck database
-> db.createUser({
+```sh
+ db.createUser({
   user: "gpsadmin",
   pwd: "pcsgps123",
   roles: [
     { role: "readWrite", db: "navtrack" }
   ]
 })
-
+```
 10. edit mongod.conf file for enable security
 
 #security
@@ -33,7 +42,7 @@
 security:
   authorization: "enabled"
 
-1. change connection string for navtrack exe and Asset Infinity Webapi
+1. change connection string for navtrack exe and Webapi appsettings
 1. Add a asset to start getting location. 
   
 {{url}}/api/gps/assets
