@@ -14,4 +14,7 @@
 
 ## Links
 - https://www.youtube.com/watch?v=vUYnRGotTbo
+- https://www.youtube.com/watch?v=xOS0BhhdUbo - Series
+- https://www.youtube.com/watch?v=zDKTnYDbMkE
+- https://medium.com/@julio.pessan.pessan/the-future-of-apps-with-ai-agents-and-vertical-ai-87d4ced721b7
 
