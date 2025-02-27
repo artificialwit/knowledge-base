@@ -1,4 +1,25 @@
-# LLM Bots
+# LLM Introduction
+
+## What is LLM in simple term.
+### Understands Intent – 
+  - in simple language , LLM extract Intent and param value from prompt/text and response based on knowledge in human language other than just field and value. for example - user says,
+    -   I need to book a flight from New York to London on March 10.
+    -   Schedule a sales report for last quarter and email it to John.
+  - It figures out what the user wants from the text (e.g., "Book a flight" or "Generate a report").
+  - Extracts Parameters (Entities) – It pulls out key details from the text (e.g., "New York to London," "March 10," or "Sales Report for Q1").
+  - Generates a Response – It replies in natural human language, using its stored knowledge and understanding of context.
+  - Unlike a traditional system that just maps fields to values, an LLM can infer meaning, handle complex queries, and respond intelligently based on its training data.
+  - For example:
+    - User Input: "Schedule a sales report for last quarter and email it to John."
+    - LLM Interpretation:
+      - Intent: Generate & Send Report
+      - Parameters:
+        - Report Type: Sales
+        - Timeframe: Last Quarter
+        - Recipient: John
+      - Response: "Your sales report for the last quarter has been scheduled and will be emailed to John."
+    #### This makes it more dynamic than a simple form-based input system. 🚀
+
 ## Why Bot (AI Agent)
   - Satya Nadella on the Future of SaaS, How 2025 is the year of Agents, Advice for Indian Engineers
     - https://www.youtube.com/watch?v=GuqAUv4UKXo
