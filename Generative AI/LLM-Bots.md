@@ -15,6 +15,7 @@
 - https://aistudio.google.com/
 
 ## Links
+- https://www.youtube.com/watch?v=h148bna9VIw
 - https://www.youtube.com/watch?v=vUYnRGotTbo
 - https://www.youtube.com/watch?v=xOS0BhhdUbo - Series
 - https://www.youtube.com/watch?v=zDKTnYDbMkE
