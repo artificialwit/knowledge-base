@@ -15,3 +15,10 @@ Running computations on a trained AI model to generate predictions in real-time.
 #### Decision-Making Crunching
 AI agents evaluating multiple factors before making decisions.
 - Example: Your AI agent processing workflows, API calls, and business rules to determine the next action.
+
+## Vertical AI vs AI Agents
+### Vertical AI 
+refers to AI systems designed for specific industries or domains, such as healthcare, finance, or manufacturing. These AI models are highly specialized, trained on domain-specific data, and optimized for tasks like medical diagnosis, fraud detection, or predictive maintenance. Vertical AI is typically built with a deep understanding of industry challenges, regulations, and workflows, making it highly effective but less flexible outside its intended domain.
+
+### AI Agents
+on the other hand, are autonomous systems that can interact with environments, make decisions, and perform tasks based on user inputs, rules, or learned behavior. Unlike Vertical AI, which is specialized, AI agents can be more dynamic, adapting to different contexts by integrating various models and logic. These agents can automate workflows, call APIs, process natural language, and execute actions across multiple domains, making them versatile for business automation, personal assistance, and task management.
