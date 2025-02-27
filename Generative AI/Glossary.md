@@ -22,3 +22,6 @@ refers to AI systems designed for specific industries or domains, such as health
 
 ### AI Agents
 on the other hand, are autonomous systems that can interact with environments, make decisions, and perform tasks based on user inputs, rules, or learned behavior. Unlike Vertical AI, which is specialized, AI agents can be more dynamic, adapting to different contexts by integrating various models and logic. These agents can automate workflows, call APIs, process natural language, and execute actions across multiple domains, making them versatile for business automation, personal assistance, and task management.
+
+## RAG
+Retrieval-augmented generation (RAG) is an AI framework that enhances large language models (LLMs) by retrieving information from external sources. This improves the quality of the output and the user experience. 
