@@ -19,6 +19,7 @@
 
 ## Online Agent Development Platform
   - Botpress
+    - Botpress channel for learning https://www.youtube.com/@Botpress
     - https://botpress.com
     - https://app.botpress.cloud
     - https://studio.botpress.cloud
