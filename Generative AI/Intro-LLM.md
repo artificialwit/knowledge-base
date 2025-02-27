@@ -9,7 +9,7 @@
 ## Premise of LLM Model to be used
 - Cloud
   - OpenAI
-
+    - https://cookbook.openai.com/examples/how_to_call_functions_with_chat_models
   - Groq
     - https://groq.com/
   - Google
