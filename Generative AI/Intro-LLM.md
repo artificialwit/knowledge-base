@@ -52,9 +52,9 @@
   - LangChain
     - https://www.langchain.com/langgraph
 
-## user Interface framework- Awesome
-streamlit -
-https://www.youtube.com/watch?v=D0D4Pa22iG0&t=41s
+## User Interface framework- Awesome
+### https://streamlit.io/
+  - https://www.youtube.com/watch?v=D0D4Pa22iG0&t=41s
 
 ## Links
 - Building AI Agent from Scratch
