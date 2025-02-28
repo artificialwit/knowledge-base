@@ -57,6 +57,8 @@
   - https://www.youtube.com/watch?v=D0D4Pa22iG0&t=41s
 
 ## Links
+- AI Agent Architecture
+  -  https://www.youtube.com/watch?v=FEU6-Il8jjw 
 - Building AI Agent from Scratch
   - https://www.youtube.com/watch?v=vUYnRGotTbo
 - What is Agentic AI? Important For GEN AI In 2025
