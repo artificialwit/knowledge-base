@@ -64,6 +64,23 @@
 - Making API Calls in Botpress (for beginners!)
   - https://www.youtube.com/watch?v=h148bna9VIw
 
-- 
-- 
+## Available Roles in OpenAI Chat API
+### Role	Description
+  - "system"	Provides instructions & context for the assistant. Sets behavior, style, and rules.
+  - "user"	Represents the user's input (questions, commands, requests).
+  - "assistant"	Represents the AI's response based on knowledge & context.
+  - "tool" (or "function")	Used when the assistant calls an external function or tool.
+  - "data"	Represents output from a tool (e.g., API response, database query).
+### Exmaple
+```json
+[
+    {"role": "system", "content": "You are a helpful AI assistant specialized in tech support."},
+    {"role": "user", "content": "How do I reset my password?"},
+    {"role": "assistant", "content": "You can reset your password by clicking 'Forgot Password' on the login page."},
+    {"role": "user", "content": "Can you show me the steps?"},
+    {"role": "assistant", "content": "Sure! Step 1: Go to the login page..."},
+    {"role": "tool", "name": "get_user_info", "content": "Fetching user details..."},
+    {"role": "data", "content": "User email: user@example.com, Last login: 2 days ago"}
+]
+```
 
