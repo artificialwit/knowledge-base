@@ -67,6 +67,8 @@
   - https://www.youtube.com/watch?v=xOS0BhhdUbo
 - Making API Calls in Botpress (for beginners!)
   - https://www.youtube.com/watch?v=h148bna9VIw
+- Piecode
+  - https://www.youtube.com/watch?v=erUfLIi9OFM
 
 ## Available Roles in OpenAI Chat API
 ### Role	Description
