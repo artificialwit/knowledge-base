@@ -61,6 +61,7 @@
   -  https://www.youtube.com/watch?v=FEU6-Il8jjw 
 - Building AI Agent from Scratch
   - https://www.youtube.com/watch?v=vUYnRGotTbo
+  - https://www.youtube.com/watch?v=kRR1K3q5nlg
 - What is Agentic AI? Important For GEN AI In 2025
   - https://www.youtube.com/watch?v=xOS0BhhdUbo
 - Making API Calls in Botpress (for beginners!)
