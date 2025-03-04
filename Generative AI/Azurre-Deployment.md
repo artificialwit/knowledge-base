@@ -1,0 +1,11 @@
+# Deploy Python Streamlit App on azure
+- Install Azure CLI
+- az login
+- az extension add --name webapp
+- git remote add azure https://webapi-linux-staging-v3.scm.azurewebsites.net/WebApi-Linux-Staging-v3.git
+- git remote -v
+  - Below output isexpected
+  - azure   https://webapi-linux-staging-v3.scm.azurewebsites.net/WebApi-Linux-Staging-v3.git (fetch)
+  - azure   https://webapi-linux-staging-v3.scm.azurewebsites.net/WebApi-Linux-Staging-v3.git (push)
+- az webapp deployment list-publishing-credentials --name WebApi-Linux-Staging-v3 --resource-group YourResourceGroup
+- az webapp deployment source config-local-git --name WebApi-Linux-Staging-v3 --resource-group Staging-Preprod
