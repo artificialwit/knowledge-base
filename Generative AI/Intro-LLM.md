@@ -69,6 +69,7 @@
   - https://www.youtube.com/watch?v=h148bna9VIw
 - Piecode
   - https://www.youtube.com/watch?v=erUfLIi9OFM
+- https://www.youtube.com/watch?v=ZtltjSjFPDg
 
 ## Available Roles in OpenAI Chat API
 ### Role	Description
