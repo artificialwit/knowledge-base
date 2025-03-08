@@ -14,6 +14,9 @@
 ### Language
   - **just PL/SQL, in postgre it calls PL/pgSQL**. It allows users to write functions, triggers, and procedural code within the database using control structures like loops, conditions, and error handling
   - **PL/Python – Allows writing functions in Python.**
+## Extension installation
+  - visit https://pgxn.org/
+  - search your extension and install
 ### Common Command
   - SELECT datname FROM pg_database
   - SERIAL data type for Auto increment
