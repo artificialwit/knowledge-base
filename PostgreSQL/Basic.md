@@ -6,10 +6,14 @@
   - Command
     - use pgxnclient inplace of pgxn 
 ### Entesions
+  - https://github.com/pgvector/pgvector?tab=readme-ov-file
+  - Ensure C++ support in Visual Studio is installed, and run:
+    - https://learn.microsoft.com/en-us/cpp/build/building-on-the-command-line?view=msvc-170#download-and-install-the-tools
   - to download extension
     -  pgxnclient install --pg_config "C:\Program Files\PostgreSQL\17\bin\pg_config.exe" vector
     -  git clone https://github.com/supabase/pg_net.git
-    -  cd pg_net 
+    -  cd pg_net
+    -  https://github.com/pgvector/pgvector 
   - create extension if not exists pg_net
   - create extension if not exists vector
   - 
