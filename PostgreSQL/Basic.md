@@ -6,6 +6,10 @@
   - Command
     - use pgxnclient inplace of pgxn 
 ### Entesions
+  - to download extension
+    -  pgxnclient install --pg_config "C:\Program Files\PostgreSQL\17\bin\pg_config.exe" vector
+    -  git clone https://github.com/supabase/pg_net.git
+    -  cd pg_net 
   - create extension if not exists pg_net
   - create extension if not exists vector
   - 
