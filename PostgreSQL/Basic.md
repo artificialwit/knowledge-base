@@ -1,5 +1,14 @@
 ## Postgre SQL basic
-
+### Environment variable settings
+  - System Variables
+    - Variable Name: PGHOME
+    - Vairable Valule:  C:\Program Files\PostgreSQL\17\bin
+  - Command
+    - use pgxnclient inplace of pgxn 
+### Entesions
+  - create extension if not exists pg_net
+  - create extension if not exists vector
+  - 
 ## installlation from website and default
   - https://www.enterprisedb.com/postgresql-tutorial-resources-training-1?uuid=69f95902-b451-4735-b7e4-1b62209d4dfd&campaignId=postgres_rc_17
   - after insatllation search in windows as PgAdmin to run the Postgre Console, it is just like SQL Server managament Studio
