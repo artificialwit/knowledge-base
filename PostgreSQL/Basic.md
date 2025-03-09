@@ -8,6 +8,8 @@
 ### Entesions
   - *Make* is also must be installed to run the make file 
   - Make sure your have installed C++ tools, from microsoft visual studio installer, these must be below
+  - Below command is not working , but have for future reference
+    -  pgxnclient install --pg_config "C:\Program Files\PostgreSQL\17\bin\pg_config.exe" vector 
   - Now follow the window steps
     - https://github.com/pgvector/pgvector
   - PG_NET
