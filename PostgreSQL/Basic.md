@@ -10,6 +10,13 @@
   - Make sure your have installed C++ tools, from microsoft visual studio installer, these must be below
   - Now follow the window steps
     - https://github.com/pgvector/pgvector
+  - PG_NET
+    - Use Installation instruction of pgvector
+    - call "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvars64.bat"
+    - git clone https://github.com/supabase/pg_net.git
+    - cd pg_net
+    - set "PGROOT=C:\Program Files\PostgreSQL\17"
+    - make && make install
   - create extension if not exists pg_net
   - create extension if not exists vector
   - 
