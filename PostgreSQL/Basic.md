@@ -5,38 +5,21 @@
     - Vairable Valule:  C:\Program Files\PostgreSQL\17\bin
   - Command
     - use pgxnclient inplace of pgxn 
-### Entesions
+## Entesions
   - *Make* is also must be installed to run the make file 
   - Make sure your have installed C++ tools, from microsoft visual studio installer, these must be below
   - Below command is not working , but have for future reference
     -  pgxnclient install --pg_config "C:\Program Files\PostgreSQL\17\bin\pg_config.exe" vector 
   - Now follow the window steps
     - https://github.com/pgvector/pgvector
-  - HTTP
-  - Copy and Paste the Files
-You need to copy and paste the http extension files into the correct directories:
-
-DLL File (http.dll) → PostgreSQL lib Directory
-
-Copy the http.dll file.
-Navigate to:
-vbnet
-Copy
-Edit
-C:\Program Files\PostgreSQL\<version>\lib\
-Paste the file here.
-SQL Files (http--*.sql, http.control) → PostgreSQL extension Directory
-
-Copy the http--*.sql and http.control files.
-Navigate to:
-pgsql
-Copy
-Edit
-C:\Program Files\PostgreSQL\<version>\share\extension\
-Paste the files here.
-
-    -  Need to extract the folder and copy and paste relevent file in installed location fo postgreSQL
-    -  And disbale the SSL
+### HTTP Extension for API call from database
+  - Download windows zip from site or if stored locally
+  - Copy and Paste the into the Postgre insatlled directories (C:\Program Files\PostgreSQL\17\):
+    - DLL File (http.dll) → PostgreSQL dll Directory
+    - bin file in bin folder of PostgreSQL
+    - C:\Program Files\PostgreSQL\<version>\share\extension\
+    - SQL Files (http--*.sql, http.control) → PostgreSQL extension Directory
+    - And Install SSL if, SSL is not working then disbale the SSL with below command
     ``` sql
 
       SELECT http_set_curlopt('CURLOPT_SSL_VERIFYPEER', 'false');
