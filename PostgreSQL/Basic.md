@@ -13,6 +13,28 @@
   - Now follow the window steps
     - https://github.com/pgvector/pgvector
   - HTTP
+  - Copy and Paste the Files
+You need to copy and paste the http extension files into the correct directories:
+
+DLL File (http.dll) → PostgreSQL lib Directory
+
+Copy the http.dll file.
+Navigate to:
+vbnet
+Copy
+Edit
+C:\Program Files\PostgreSQL\<version>\lib\
+Paste the file here.
+SQL Files (http--*.sql, http.control) → PostgreSQL extension Directory
+
+Copy the http--*.sql and http.control files.
+Navigate to:
+pgsql
+Copy
+Edit
+C:\Program Files\PostgreSQL\<version>\share\extension\
+Paste the files here.
+
     -  Need to extract the folder and copy and paste relevent file in installed location fo postgreSQL
     -  And disbale the SSL
     ``` sql
