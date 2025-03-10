@@ -47,6 +47,7 @@
     - https://app.botpress.cloud
     - https://studio.botpress.cloud
     - https://botpress.com/integrations/charts
+  - https://n8n.io/
   - Agno
       https://www.agno.com/ --- phidata.com
   - LangChain
