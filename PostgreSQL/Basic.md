@@ -12,14 +12,28 @@
     -  pgxnclient install --pg_config "C:\Program Files\PostgreSQL\17\bin\pg_config.exe" vector 
   - Now follow the window steps
     - https://github.com/pgvector/pgvector
-  - PG_NET
-    - Use Installation instruction of pgvector
-    - call "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvars64.bat"
-    - git clone https://github.com/supabase/pg_net.git
-    - cd pg_net
-    - set "PGROOT=C:\Program Files\PostgreSQL\17"
-    - make && make install
-  - create extension if not exists pg_net
+  - HTTP
+    -  Need to extract the folder and copy and paste relevent file in installed location fo postgreSQL
+    -  And disbale the SSL
+    ``` sql
+
+      SELECT http_set_curlopt('CURLOPT_SSL_VERIFYPEER', 'false');
+      SELECT http_set_curlopt('CURLOPT_SSL_VERIFYHOST', 'false');
+
+
+      WITH api_response AS (
+          SELECT content::jsonb AS json_data
+          FROM http_get('https://api-staging.assetinfinity.io/api/public/OrganizationDetails?company=dev')
+      )
+      SELECT
+          json_data->'data'->0->>'apiUrl' AS api_url,
+          json_data->'data'->0->>'fileApiUrl' AS file_api_url,
+          json_data->'data'->0->>'companyName' AS company_name,
+          json_data->'data'->0->>'expiryDate' AS expiry_date,
+          json_data->'data'->0->>'webAppTitle' AS web_app_title,
+          json_data->'data'->0->>'fabIcon' AS fab_icon
+      FROM api_response;
+      ```
   - create extension if not exists vector
   - 
 ## installlation from website and default
