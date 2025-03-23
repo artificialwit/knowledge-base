@@ -71,6 +71,8 @@
 - Piecode
   - https://www.youtube.com/watch?v=erUfLIi9OFM
 - https://www.youtube.com/watch?v=ZtltjSjFPDg
+- Build AI Agents that EVOLVE Over Time
+  - https://www.youtube.com/watch?v=iOZpiXLT7iY
 
 ## Available Roles in OpenAI Chat API
 ### Role	Description
