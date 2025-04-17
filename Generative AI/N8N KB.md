@@ -1,0 +1,4 @@
+- How I Built JARVIS with No Code (Tutorial w/ Lovable, ElevenLabs, n8n)
+  -   https://www.youtube.com/watch?v=KUvSzvFeZls
+-   How to Use Claude to INSTANTLY Build & Replicate Any n8n Agents
+  -  https://www.youtube.com/watch?v=JM0y9JKopc0
