@@ -1,14 +1,14 @@
 ### Controls used in 8n8
 
-1. Triggers
+1. ## Triggers
     - Webhook
   
-2. Credentials
+2. ## Credentials
    - Postgres Account
   
-3. Tools
+3. ## Tools
    - Postgres Tool
-2. Data Transformation
+2. ## Data Transformation
    - Code  - Run custom javasript or python code
    - Date & Time - Manipulate date and time values
    - Edit Fields (set) - Modify, Add Or Remove item fields
@@ -22,21 +22,45 @@
    - Aggregate - Combine a field from many items into a list in a single item
    - Merge - Merge data of multiple streams once data from both is available
    - Summarize - Sum , Count, Max , Min, etc. accross items
-   - Compression - Compress and decopress files
-   - Convert to file - Convert json data to a binary data
    - Crypto - Provide Crypto graphic utinilies
-   - Edit Image - Edit an image like blur, resize, and adding border and text
-   - Extract From File - Convert Binary data to JSON
-   - HTML  - Work with HTML
-   - Markdown - Convert data between Markdown and HTML
-   - XML - Convert data from and to XML
    - Rename Keys - update item field names
    - Sort - Change Items order
    - Compare Datasets - Compare tow inputs for datasets
    - Execute sub-workflow - Call other n8n workflow
    - Stop and Error - Throw an error in workflow
    - Wait - Wait before continue with execution
-3. Chat Model (Language Models)
+3. ## File Handling
+   - Convert to file - Convert json data to a binary data
+   - Extract From File - Convert Binary data to JSON
+   - Edit Image - Edit an image like blur, resize, and adding border and text
+   - HTML  - Work with HTML
+   - Markdown - Convert data between Markdown and HTML
+   - XML - Convert data from and to XML
+   - Compression - Compress and decopress files
+   - ## Google
+       - Google Ads
+       - Google Chat
+       - Google Docs
+       - Google Books
+       - Google Drive
+           - File Copy , Downlaod , Create , Move , Share , Update , Upload
+           - Folder Create, Delete , Share
+       - Google Task
+       - Google Sheets
+       - Google Slides
+       - Google Calander
+       - Google Contact
+       - Google Analytics
+       - Google Translate
+       - Google Prospective
+       - Google Cloud Storage
+       - Google Cloud Firestore
+       - Google Workspace Admin
+       - Google Business Profile
+       - Google Cloud Natural Language
+       - Google Cloud Realtime Database
+       -  
+3. ## Chat Model (Language Models)
    - Groq Chat Model
    - Ollama Chat Model
    - Deepseek Chat Model
@@ -48,7 +72,7 @@
    - Google Gemini Chat Model
    - Google Vertex Chat Model
    - Mistral Cloud Chat Model
-5. Chat Memory
+5. ## Chat Memory
    - Simple Chat Memory (Sqlite)
    - Postgres Chat Memory - Store chat hisotory in postgres sql
    - MongoDB Chat Memory - Store chat hisotory in mongodb collection
