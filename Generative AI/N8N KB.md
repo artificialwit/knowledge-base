@@ -7,6 +7,7 @@
    - Date & Time - Manipulate date and time values
    - Edit Fields (set) - Modify, Add Or Remove item fields
    - If - Route Item two different branches (true/false)
+   - Switch - Route item depending on defined expression or rules
    - Filter - remove items matching a condition
    - Loop Over Items (Split in batches) - Split data into batches and iterate over each batch
    - Limit - restrict the number of rows
@@ -25,7 +26,11 @@
    - XML - Convert data from and to XML
    - Rename Keys - update item field names
    - Sort - Change Items order
-3. Chat Model
+   - Compare Datasets - Compare tow inputs for datasets
+   - Execute sub-workflow - Call other n8n workflow
+   - Stop and Error - Throw an error in workflow
+   - Wait - Wait before continue with execution
+3. Chat Model (Language Models)
    - Groq Chat Model
    - Ollama Chat Model
    - Deepseek Chat Model
@@ -37,6 +42,13 @@
    - Google Gemini Chat Model
    - Google Vertex Chat Model
    - Mistral Cloud Chat Model
+4. Chat Memory
+   - Simple Chat Memory (Sqlite)
+   - Postgres Chat Memory - Store chat hisotory in postgres sql
+   - MongoDB Chat Memory - Store chat hisotory in mongodb collection
+   - Redis Chat Memory
+   - Xata
+   - Zep
 ### Reference
 - How I Built JARVIS with No Code (Tutorial w/ Lovable, ElevenLabs, n8n)
   -   https://www.youtube.com/watch?v=KUvSzvFeZls
