@@ -1,7 +1,13 @@
 ### Controls used in 8n8
+
 1. Triggers
     - Webhook
-    - 
+  
+2. Credentials
+   - Postgres Account
+  
+3. Tools
+   - Postgres Tool
 2. Data Transformation
    - Code  - Run custom javasript or python code
    - Date & Time - Manipulate date and time values
@@ -42,7 +48,7 @@
    - Google Gemini Chat Model
    - Google Vertex Chat Model
    - Mistral Cloud Chat Model
-4. Chat Memory
+5. Chat Memory
    - Simple Chat Memory (Sqlite)
    - Postgres Chat Memory - Store chat hisotory in postgres sql
    - MongoDB Chat Memory - Store chat hisotory in mongodb collection
