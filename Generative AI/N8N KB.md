@@ -1,10 +1,39 @@
 ### Controls used in 8n8
 
 1. ## Triggers
-    - Webhook
+    - Manually - For Testing purpose specially 
+    - On Webhook call
+    - Run Any Other App like Bamboo HR, Asana, Microsoft Dynamic CRM etc.
+    - On A Schedule
+    - On form submission - We can create form using n8n
+    - Whenn executed by another workflow
+    - On Chat Message
+    - #### Others
+        - Email Trigger
+        - Error Trigger
+        - Local File Trigger
+        - n8n Trigger
+        - SSE (Server side event) Trigger
   
-2. ## Credentials
-   - Postgres Account
+2. ## Credentials Account
+   - ### Database
+       - Postgres
+       - Sqlite
+       - Supabase
+   - ### Language Model - Link with Language Models
+       - OpenAI
+       - Azure
+       - Ollama
+   - ### Cloud Account
+        - #### Google
+            - Google Drive Account (Oauth2 API)
+            - Google Calendar Account  (Oauth2 API)
+            - etc.
+        - #### WhatsApp
+            - WhatsApp API
+            - WhatsApp OAuth
+        - #### Microsoft
+            - Drive OAuth2 API
   
 3. ## Tools
    - Postgres Tool
@@ -67,6 +96,7 @@
 3. ## Chat Model (Language Models)
    - Groq Chat Model
    - Ollama Chat Model
+   - OpenAI Chat Model
    - Deepseek Chat Model
    - xAI Grok Chat Model
    - Anthropic Chat Model
