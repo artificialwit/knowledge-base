@@ -48,7 +48,7 @@
        - Google Task
        - Google Sheets
        - Google Slides
-       - Google Calander
+       - Google Calendar
        - Google Contact
        - Google Analytics
        - Google Translate
@@ -59,7 +59,11 @@
        - Google Business Profile
        - Google Cloud Natural Language
        - Google Cloud Realtime Database
-       -  
+       -  ### Google Tools
+           - Google Drive Tool
+           - Google Sheet Tool
+           - Google Calendar Tool
+           - Google SerpAPI - Google Search etc.
 3. ## Chat Model (Language Models)
    - Groq Chat Model
    - Ollama Chat Model
